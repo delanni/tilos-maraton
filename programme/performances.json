@@ -1,0 +1,200 @@
+[
+  {
+    "id": "06-06-hari-drama",
+    "artistId": "hari-drama",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-06T20:30:00+02:00",
+    "endTime": "2025-06-06T21:30:00+02:00"
+  },
+  {
+    "id": "06-06-tombola",
+    "artistId": "tombola",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-06T21:30:00+02:00",
+    "endTime": "2025-06-06T22:00:00+02:00"
+  },
+  {
+    "id": "06-06-lenkke",
+    "artistId": "lenkke",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-06T22:00:00+02:00",
+    "endTime": "2025-06-06T23:00:00+02:00"
+  },
+  {
+    "id": "06-06-freakin-disco",
+    "artistId": "freakin-disco",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-06T23:00:00+02:00",
+    "endTime": "2025-06-07T00:30:00+02:00"
+  },
+  {
+    "id": "06-07-marcel-carmel",
+    "artistId": "marcel-carmel",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-07T00:30:00+02:00",
+    "endTime": "2025-06-07T01:30:00+02:00"
+  },
+  {
+    "id": "06-07-isu",
+    "artistId": "isu",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-07T01:30:00+02:00",
+    "endTime": "2025-06-07T03:00:00+02:00"
+  },
+  {
+    "id": "06-07-dork",
+    "artistId": "dork",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-07T03:00:00+02:00",
+    "endTime": "2025-06-07T04:00:00+02:00"
+  },
+  {
+    "id": "06-06-csizmas-es-a-kan-durok",
+    "artistId": "csizmas-es-a-kan-durok",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-06T20:30:00+02:00",
+    "endTime": "2025-06-06T21:30:00+02:00"
+  },
+  {
+    "id": "06-06-halal-orgazmus",
+    "artistId": "halal-orgazmus",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-06T21:30:00+02:00",
+    "endTime": "2025-06-06T22:30:00+02:00"
+  },
+  {
+    "id": "06-06-angel",
+    "artistId": "angel",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-06T22:30:00+02:00",
+    "endTime": "2025-06-06T23:30:00+02:00"
+  },
+  {
+    "id": "06-06-duppa-eutanasia",
+    "artistId": "duppa-eutanasia",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-06T23:30:00+02:00",
+    "endTime": "2025-06-07T00:30:00+02:00"
+  },
+  {
+    "id": "06-07-paranoid",
+    "artistId": "paranoid",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-07T00:30:00+02:00",
+    "endTime": "2025-06-07T01:30:00+02:00"
+  },
+  {
+    "id": "06-07-magematix",
+    "artistId": "magematix",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-07T01:30:00+02:00",
+    "endTime": "2025-06-07T02:30:00+02:00"
+  },
+  {
+    "id": "06-07-sldr",
+    "artistId": "sldr",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-07T02:30:00+02:00",
+    "endTime": "2025-06-07T03:30:00+02:00"
+  },
+  {
+    "id": "06-07-darthp",
+    "artistId": "darthp",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-07T03:30:00+02:00",
+    "endTime": "2025-06-07T04:00:00+02:00"
+  },
+  {
+    "id": "06-06-keyser",
+    "artistId": "keyser",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-06T20:00:00+02:00",
+    "endTime": "2025-06-06T22:00:00+02:00"
+  },
+  {
+    "id": "06-06-suhaid",
+    "artistId": "suhaid",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-06T22:00:00+02:00",
+    "endTime": "2025-06-07T00:00:00+02:00"
+  },
+  {
+    "id": "06-07-crimson-imre-kiss",
+    "artistId": "crimson-imre-kiss",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-07T00:00:00+02:00",
+    "endTime": "2025-06-07T02:00:00+02:00"
+  },
+  {
+    "id": "06-07-hudak",
+    "artistId": "hudak",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-07T02:00:00+02:00",
+    "endTime": "2025-06-07T04:00:00+02:00"
+  },
+  {
+    "id": "06-06-johnny-drama",
+    "artistId": "johnny-drama",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-06T22:00:00+02:00",
+    "endTime": "2025-06-07T00:00:00+02:00"
+  },
+  {
+    "id": "06-07-turbo-bigel",
+    "artistId": "turbo-bigel",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-07T00:00:00+02:00",
+    "endTime": "2025-06-07T02:00:00+02:00"
+  },
+  {
+    "id": "06-07-nandesz-carl-oh",
+    "artistId": "nandesz-carl-oh",
+    "dayId": "day-1",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-07T02:00:00+02:00",
+    "endTime": "2025-06-07T04:00:00+02:00"
+  }
+]

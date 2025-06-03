@@ -1,0 +1,156 @@
+[
+  {
+    "id": "hari-drama",
+    "name": "Hari Drama",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "tombola",
+    "name": "Tombola!",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "lenkke",
+    "name": "Lenkke_",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "freakin-disco",
+    "name": "Freakin' Disco",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "marcel-carmel",
+    "name": "Marcel a.k.a Carmel",
+    "collective": null,
+    "description": "",
+    "genre": "Live"
+  },
+  {
+    "id": "isu",
+    "name": "Isu",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "dork",
+    "name": "Dork",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "csizmas-es-a-kan-durok",
+    "name": "Csizmás és a Kan Dúrok",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "halal-orgazmus",
+    "name": "(Halál;Orgazmus)",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "angel",
+    "name": "Ängel (SWE)",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "duppa-eutanasia",
+    "name": "Dupla Eutanázia",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "paranoid",
+    "name": "Parano!d",
+    "collective": "BEAT SAFARI",
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "magematix",
+    "name": "Magematix",
+    "collective": "BEAT SAFARI",
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "sldr",
+    "name": "SLDR",
+    "collective": "BEAT SAFARI",
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "darthp",
+    "name": "DarthP",
+    "collective": "BEAT SAFARI",
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "keyser",
+    "name": "Keyser",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "suhaid",
+    "name": "Suhaid",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "crimson-imre-kiss",
+    "name": "Crimson & Imre Kiss",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "hudak",
+    "name": "Hudak",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "johnny-drama",
+    "name": "Johnny Drama",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "turbo-bigel",
+    "name": "Turbo b2b BigEL",
+    "collective": null,
+    "description": "",
+    "genre": null
+  },
+  {
+    "id": "nandesz-carl-oh",
+    "name": "Nándesz b2b Carl Oh",
+    "collective": null,
+    "description": "",
+    "genre": null
+  }
+]

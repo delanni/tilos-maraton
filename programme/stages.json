@@ -1,0 +1,37 @@
+[
+  {
+    "id": "kerti-szinpad",
+    "name": "KERTI SZÍNPAD",
+    "description": "Nagyszínpad a kertben"
+  },
+  {
+    "id": "nagyszinpad",
+    "name": "NAGYSZÍNPAD",
+    "description": "A tágas beltéri nagyszínpad"
+  },
+  {
+    "id": "kisterem",
+    "name": "KISTEREM",
+    "description": "Fülledt beltéri kisterem"
+  },
+  {
+    "id": "cokxpon",
+    "name": "CÖKXPÔN",
+    "description": "Hangulatos színpad az emeleten, a Fotelbárban"
+  },
+  {
+    "id": "kerti-dj",
+    "name": "DJ A KERTBEN",
+    "description": "Tánctér a kertben (miután a kerti színpadon vége a programnak)"
+  },
+  {
+    "id": "tilos-caravan-studio",
+    "name": "TILOS CARAVAN STÚDIÓ",
+    "description": "Élő bejelentkezés a Dürer Kertből"
+  },
+  {
+    "id": "bogracs",
+    "name": "BOGRÁCS",
+    "description": "Kerti konyha, a kerti színpad mellett. Minden nap 2 féle (húsos/vega) étellel"
+  }
+]
