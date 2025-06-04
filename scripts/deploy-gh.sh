@@ -32,6 +32,7 @@ rm -rf src biome.json index.html package.json yarn.lock postcss.config.js vite.c
 
 # Extract dist
 mv dist/* .
+cp index.html 404.html
 
 # Add files
 git add .
