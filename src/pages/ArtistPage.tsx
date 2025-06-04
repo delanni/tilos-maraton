@@ -3,6 +3,7 @@ import { useLoaderData, type LoaderFunction } from 'react-router-dom';
 import { BasePage } from './BasePage';
 import { getArtistById, getDayById, getPerformancesByArtistId, getStageById } from '../services/dataService';
 import type { Artist, Performance, Day, Stage } from '../types';
+import PerformanceTimeLabel from '../components/PerformanceTimeLabel';
 
 type ArtistPageData = Artist & { performances: Array<Performance & { day: Day | undefined; stage: Stage | undefined }>};
 
@@ -36,7 +37,7 @@ export const ArtistPage: React.FC = () => {
   const artist = useLoaderData() as ArtistPageData;
   
   return (
-    <BasePage title="Artist Details">
+    <BasePage>
       <div className="space-y-6">
         <div className="flex flex-col md:flex-row gap-6">
           <div className="md:w-1/3">
@@ -59,7 +60,7 @@ export const ArtistPage: React.FC = () => {
         </div>
         
         <div className="mt-8">
-          <h3 className="text-xl font-semibold mb-4">Upcoming Performances</h3>
+          <h3 className="text-xl font-semibold mb-4">{artist.name} előadásai</h3>
           <div className="space-y-2">
             {artist.performances.map((performance) => (
               <div key={performance.id} className="p-4 border rounded-lg">
@@ -69,7 +70,7 @@ export const ArtistPage: React.FC = () => {
                     <p className="text-sm text-gray-600">{performance.stage?.name} • {performance.day?.name}</p>
                   </div>
                   <div className="text-right">
-                    <p className="font-medium">{performance.startTime} - {performance.endTime}</p>
+                    <PerformanceTimeLabel performance={performance} full />
                     <p className="text-sm text-gray-600">{performance.day?.date}</p>
                   </div>
                 </div>

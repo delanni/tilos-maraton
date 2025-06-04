@@ -1,5 +1,6 @@
 export const formatTime2Digit = (dateOrString: Date | string) => {
-  const date = typeof dateOrString === 'string' ? new Date(dateOrString) : dateOrString;
+  const date =
+    typeof dateOrString === "string" ? new Date(dateOrString) : dateOrString;
   return date.toLocaleTimeString("hu-HU", {
     hour: "2-digit",
     minute: "2-digit",
@@ -7,12 +8,12 @@ export const formatTime2Digit = (dateOrString: Date | string) => {
 };
 
 export const formatDate = (dateOrString: string | Date) => {
-  const date = typeof dateOrString === 'string' ? new Date(dateOrString) : dateOrString;
+  const date =
+    typeof dateOrString === "string" ? new Date(dateOrString) : dateOrString;
   return date.toLocaleDateString("hu-HU", {
     year: "numeric",
     month: "long",
-    day: "numeric",
-    weekday: "long",
+    day: "numeric"
   });
 };
 
@@ -25,6 +26,8 @@ export const printDuration = (startTime: string, endTime: string) => {
 
   if (hours === 0) {
     return `${minutes} perc`;
+  } else if (minutes === 0) {
+    return `${hours} óra`;
   }
 
   return `${hours} óra ${minutes} perc`;

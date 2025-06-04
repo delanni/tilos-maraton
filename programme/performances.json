@@ -3,7 +3,7 @@
     "id": "06-06-hari-drama",
     "artistId": "hari-drama",
     "dayId": "day-1",
-    "description": "",
+    "description": "A hari_drama sʊl band a jövőből hozza saját magát, szigorúan titkos üzeneteket szállítva. Réges-régen rakta le őket egy űrhajó a Földre, ám még meg kellett várniuk, hogy a társadalom és a technológia megérjen arra, hogy képes legyen befogadni mondanivalójukat.",
     "stageId": "kerti-szinpad",
     "startTime": "2025-06-06T20:30:00+02:00",
     "endTime": "2025-06-06T21:30:00+02:00"
@@ -12,7 +12,7 @@
     "id": "06-06-tombola",
     "artistId": "tombola",
     "dayId": "day-1",
-    "description": "",
+    "description": "Tombola sorsolás a kerti színpadon - értékes és eszmei ajándékok! Tomboljaegyet a Merch pult mellett tudtok venni.",
     "stageId": "kerti-szinpad",
     "startTime": "2025-06-06T21:30:00+02:00",
     "endTime": "2025-06-06T22:00:00+02:00"
@@ -36,7 +36,7 @@
     "endTime": "2025-06-07T00:30:00+02:00"
   },
   {
-    "id": "06-07-marcel-carmel",
+    "id": "06-06-marcel-carmel",
     "artistId": "marcel-carmel",
     "dayId": "day-1",
     "description": "",
@@ -45,7 +45,7 @@
     "endTime": "2025-06-07T01:30:00+02:00"
   },
   {
-    "id": "06-07-isu",
+    "id": "06-06-isu",
     "artistId": "isu",
     "dayId": "day-1",
     "description": "",
@@ -54,13 +54,13 @@
     "endTime": "2025-06-07T03:00:00+02:00"
   },
   {
-    "id": "06-07-dork",
+    "id": "06-06-dork",
     "artistId": "dork",
     "dayId": "day-1",
     "description": "",
     "stageId": "nagyszinpad",
     "startTime": "2025-06-07T03:00:00+02:00",
-    "endTime": "2025-06-07T04:00:00+02:00"
+    "endTime": "2025-06-07T05:00:00+02:00"
   },
   {
     "id": "06-06-csizmas-es-a-kan-durok",
@@ -99,7 +99,7 @@
     "endTime": "2025-06-07T00:30:00+02:00"
   },
   {
-    "id": "06-07-paranoid",
+    "id": "06-06-paranoid",
     "artistId": "paranoid",
     "dayId": "day-1",
     "description": "",
@@ -108,7 +108,7 @@
     "endTime": "2025-06-07T01:30:00+02:00"
   },
   {
-    "id": "06-07-magematix",
+    "id": "06-06-magematix",
     "artistId": "magematix",
     "dayId": "day-1",
     "description": "",
@@ -117,7 +117,7 @@
     "endTime": "2025-06-07T02:30:00+02:00"
   },
   {
-    "id": "06-07-sldr",
+    "id": "06-06-sldr",
     "artistId": "sldr",
     "dayId": "day-1",
     "description": "",
@@ -126,13 +126,13 @@
     "endTime": "2025-06-07T03:30:00+02:00"
   },
   {
-    "id": "06-07-darthp",
+    "id": "06-06-darthp",
     "artistId": "darthp",
     "dayId": "day-1",
     "description": "",
     "stageId": "kisterem",
     "startTime": "2025-06-07T03:30:00+02:00",
-    "endTime": "2025-06-07T04:00:00+02:00"
+    "endTime": "2025-06-07T05:30:00+02:00"
   },
   {
     "id": "06-06-keyser",
@@ -153,7 +153,7 @@
     "endTime": "2025-06-07T00:00:00+02:00"
   },
   {
-    "id": "06-07-crimson-imre-kiss",
+    "id": "06-06-crimson-imre-kiss",
     "artistId": "crimson-imre-kiss",
     "dayId": "day-1",
     "description": "",
@@ -162,7 +162,7 @@
     "endTime": "2025-06-07T02:00:00+02:00"
   },
   {
-    "id": "06-07-hudak",
+    "id": "06-06-hudak",
     "artistId": "hudak",
     "dayId": "day-1",
     "description": "",
@@ -180,7 +180,7 @@
     "endTime": "2025-06-07T00:00:00+02:00"
   },
   {
-    "id": "06-07-turbo-bigel",
+    "id": "06-06-turbo-bigel",
     "artistId": "turbo-bigel",
     "dayId": "day-1",
     "description": "",
@@ -189,12 +189,1686 @@
     "endTime": "2025-06-07T02:00:00+02:00"
   },
   {
-    "id": "06-07-nandesz-carl-oh",
+    "id": "06-06-nandesz-carl-oh",
     "artistId": "nandesz-carl-oh",
     "dayId": "day-1",
     "description": "",
     "stageId": "kerti-dj",
     "startTime": "2025-06-07T02:00:00+02:00",
     "endTime": "2025-06-07T04:00:00+02:00"
+  },
+  {
+    "id": "06-07-slowpresso",
+    "artistId": "slowpresso",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-07T18:30:00+02:00",
+    "endTime": "2025-06-07T20:00:00+02:00"
+  },
+  {
+    "id": "06-07-korai-electric",
+    "artistId": "korai-electric",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-07T20:00:00+02:00",
+    "endTime": "2025-06-07T21:30:00+02:00"
+  },
+  {
+    "id": "06-07-fmxxx-all-stars-tombola-show",
+    "artistId": "fmxxx-all-stars-tombola-show",
+    "dayId": "day-2",
+    "description": "FMXXX Tombola Show a kerti színpadon - kegytárgyak és remek ajándékok! Tomboljaegyet a Merch pult mellett tudtok venni.",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-07T21:30:00+02:00",
+    "endTime": "2025-06-07T22:30:00+02:00"
+  },
+  {
+    "id": "06-07-the-acoustic-manual-techno-party",
+    "artistId": "the-acoustic-manual-techno-party",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-07T22:00:00+02:00",
+    "endTime": "2025-06-07T23:30:00+02:00"
+  },
+  {
+    "id": "06-07-operentzia",
+    "artistId": "operentzia",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-07T23:30:00+02:00",
+    "endTime": "2025-06-08T01:00:00+02:00"
+  },
+  {
+    "id": "06-07-adam-salman",
+    "artistId": "adam-salman",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-08T01:00:00+02:00",
+    "endTime": "2025-06-08T03:00:00+02:00"
+  },
+  {
+    "id": "06-07-para-halu",
+    "artistId": "para-halu",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-08T03:00:00+02:00",
+    "endTime": "2025-06-08T05:00:00+02:00"
+  },
+  {
+    "id": "06-07-transnomad",
+    "artistId": "transnomad",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-07T20:30:00+02:00",
+    "endTime": "2025-06-07T21:40:00+02:00"
+  },
+  {
+    "id": "06-07-dubel-ft-legat-tibor",
+    "artistId": "dubel-ft-legat-tibor",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-07T21:40:00+02:00",
+    "endTime": "2025-06-07T22:45:00+02:00"
+  },
+  {
+    "id": "06-07-grabanc",
+    "artistId": "grabanc",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-07T22:45:00+02:00",
+    "endTime": "2025-06-08T00:00:00+02:00"
+  },
+  {
+    "id": "06-07-uv-project",
+    "artistId": "uv-project",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-08T00:00:00+02:00",
+    "endTime": "2025-06-08T01:30:00+02:00"
+  },
+  {
+    "id": "06-07-axeev",
+    "artistId": "axeev",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-08T01:30:00+02:00",
+    "endTime": "2025-06-08T03:00:00+02:00"
+  },
+  {
+    "id": "06-07-alphakey",
+    "artistId": "alphakey",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-08T03:00:00+02:00",
+    "endTime": "2025-06-08T05:00:00+02:00"
+  },
+  {
+    "id": "06-07-papa-alagi",
+    "artistId": "papa-alagi",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-07T20:00:00+02:00",
+    "endTime": "2025-06-07T22:00:00+02:00"
+  },
+  {
+    "id": "06-07-nova-gravity",
+    "artistId": "nova-gravity",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-07T22:00:00+02:00",
+    "endTime": "2025-06-07T23:30:00+02:00"
+  },
+  {
+    "id": "06-07-kalumet",
+    "artistId": "kalumet",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-07T23:30:00+02:00",
+    "endTime": "2025-06-08T01:00:00+02:00"
+  },
+  {
+    "id": "06-07-katamii",
+    "artistId": "katamii",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-08T01:00:00+02:00",
+    "endTime": "2025-06-08T02:30:00+02:00"
+  },
+  {
+    "id": "06-07-switch-nollie",
+    "artistId": "switch-nollie",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-08T02:30:00+02:00",
+    "endTime": "2025-06-08T04:30:00+02:00"
+  },
+  {
+    "id": "06-07-era",
+    "artistId": "era",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-07T22:00:00+02:00",
+    "endTime": "2025-06-07T23:30:00+02:00"
+  },
+  {
+    "id": "06-07-toge",
+    "artistId": "toge",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-07T23:30:00+02:00",
+    "endTime": "2025-06-08T01:00:00+02:00"
+  },
+  {
+    "id": "06-07-snag-live",
+    "artistId": "snag-live",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-08T01:00:00+02:00",
+    "endTime": "2025-06-08T02:00:00+02:00"
+  },
+  {
+    "id": "06-07-radzsa",
+    "artistId": "radzsa",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-08T02:00:00+02:00",
+    "endTime": "2025-06-08T03:30:00+02:00"
+  },
+  {
+    "id": "06-07-lucky",
+    "artistId": "lucky",
+    "dayId": "day-2",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-08T03:30:00+02:00",
+    "endTime": "2025-06-08T05:30:00+02:00"
+  },
+  {
+    "id": "06-08-babelo-eloadas",
+    "artistId": "babeloadas",
+    "dayId": "day-3",
+    "description": "A Tilos esti mesék bábos, élő változatában a klasszikus Vasorrú bába népmesék saját feldolgozását adja elő a Soup Bábtársulat, Tóth Szabolcs zenei kíséretével.",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-08T16:00:00+02:00",
+    "endTime": "2025-06-08T17:00:00+02:00"
+  },
+  {
+    "id": "06-08-rutkai-bori-banda",
+    "artistId": "rutkai-bori-banda",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-08T17:00:00+02:00",
+    "endTime": "2025-06-08T18:00:00+02:00"
+  },
+  {
+    "id": "06-08-tombola",
+    "artistId": "tombola",
+    "dayId": "day-3",
+    "description": "Tombola sorsolás a kerti színpadon - értékes és eszmei ajándékok! Tomboljaegyet a Merch pult mellett tudtok venni.",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-08T18:00:00+02:00",
+    "endTime": "2025-06-08T19:30:00+02:00"
+  },
+  {
+    "id": "06-08-henri-gonzo",
+    "artistId": "henri-gonzo",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-08T19:30:00+02:00",
+    "endTime": "2025-06-08T20:30:00+02:00"
+  },
+  {
+    "id": "06-08-bbd",
+    "artistId": "bbd",
+    "dayId": "day-3",
+    "description": "BossaBomDia x Sell-actiON",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-08T15:30:00+02:00",
+    "endTime": "2025-06-08T20:30:00+02:00"
+  },
+  {
+    "id": "06-08-la-fuente-savaborsa",
+    "artistId": "la-fuente-savaborsa",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-08T20:30:00+02:00",
+    "endTime": "2025-06-08T22:30:00+02:00"
+  },
+  {
+    "id": "06-08-obadu-live",
+    "artistId": "obadu-live",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-08T22:30:00+02:00",
+    "endTime": "2025-06-08T23:30:00+02:00"
+  },
+  {
+    "id": "06-08-booshanka",
+    "artistId": "booshanka",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-08T23:30:00+02:00",
+    "endTime": "2025-06-08T01:30:00+02:00"
+  },
+  {
+    "id": "06-08-suhov",
+    "artistId": "suhov",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-09T01:30:00+02:00",
+    "endTime": "2025-06-09T03:30:00+02:00"
+  },
+  {
+    "id": "06-08-mayberian-sanskulotts",
+    "artistId": "mayberian-sanskulotts",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-08T20:30:00+02:00",
+    "endTime": "2025-06-08T21:30:00+02:00"
+  },
+  {
+    "id": "06-08-deva",
+    "artistId": "deva",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-08T21:30:00+02:00",
+    "endTime": "2025-06-08T23:00:00+02:00"
+  },
+  {
+    "id": "06-08-labek-chrobak",
+    "artistId": "labek-chrobak",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-08T23:00:00+02:00",
+    "endTime": "2025-06-09T01:00:00+02:00"
+  },
+  {
+    "id": "06-08-meo-culpa",
+    "artistId": "meo-culpa",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "ethnotech",
+    "startTime": "2025-06-09T00:00:00+02:00",
+    "endTime": "2025-06-09T01:30:00+02:00"
+  },
+  {
+    "id": "06-08-zakhorov",
+    "artistId": "zakhorov",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "ethnotech",
+    "startTime": "2025-06-09T01:30:00+02:00",
+    "endTime": "2025-06-09T02:30:00+02:00"
+  },
+  {
+    "id": "06-08-baladi",
+    "artistId": "baladi",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "ethnotech",
+    "startTime": "2025-06-09T02:30:00+02:00",
+    "endTime": "2025-06-09T04:30:00+02:00"
+  },
+  {
+    "id": "06-08-depart",
+    "artistId": "depart",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-08T20:00:00+02:00",
+    "endTime": "2025-06-08T21:30:00+02:00"
+  },
+  {
+    "id": "06-08-sajnosbatar",
+    "artistId": "sajnosbatar",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-08T21:30:00+02:00",
+    "endTime": "2025-06-08T23:00:00+02:00"
+  },
+  {
+    "id": "06-08-galactic-jackson",
+    "artistId": "galactic-jackson",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-08T23:00:00+02:00",
+    "endTime": "2025-06-09T00:30:00+02:00"
+  },
+  {
+    "id": "06-08-maron-peter-bernath",
+    "artistId": "maron-peter-bernath",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-09T00:30:00+02:00",
+    "endTime": "2025-06-09T02:30:00+02:00"
+  },
+  {
+    "id": "06-08-jaffa-surfa",
+    "artistId": "jaffa-surfa",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-09T02:30:00+02:00",
+    "endTime": "2025-06-09T04:30:00+02:00"
+  },
+  {
+    "id": "06-08-zsager-balazs-vs-fluidum-natalie-szende",
+    "artistId": "zsager-balazs-vs-fluidum-natalie-szende",
+    "dayId": "day-3",
+    "description": "TRANSCENDENT WAVES, ambient live act",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-08T18:00:00+02:00",
+    "endTime": "2025-06-08T22:00:00+02:00"
+  },
+  {
+    "id": "06-08-ferenc-szanati-aero",
+    "artistId": "ferenc-szanati-aero",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-08T22:00:00+02:00",
+    "endTime": "2025-06-09T00:00:00+02:00"
+  },
+  {
+    "id": "06-08-beko",
+    "artistId": "beko",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-09T00:00:00+02:00",
+    "endTime": "2025-06-09T01:30:00+02:00"
+  },
+  {
+    "id": "06-08-garpo",
+    "artistId": "garpo",
+    "dayId": "day-3",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-09T01:30:00+02:00",
+    "endTime": "2025-06-09T03:30:00+02:00"
+  },
+  {
+    "id": "06-09-erdofo-akusztik",
+    "artistId": "erdofo",
+    "dayId": "day-4",
+    "description": "akusztik",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-09T20:00:00+02:00",
+    "endTime": "2025-06-09T21:00:00+02:00"
+  },
+  {
+    "id": "06-09-tombola-2",
+    "artistId": "tombola",
+    "dayId": "day-4",
+    "description": "Tombola sorsolás a kerti színpadon - értékes és eszmei ajándékok! Tomboljaegyet a Merch pult mellett tudtok venni.",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-09T21:15:00+02:00",
+    "endTime": "2025-06-09T21:45:00+02:00"
+  },
+  {
+    "id": "06-09-hakumba",
+    "artistId": "hakumba",
+    "dayId": "day-4",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-09T21:45:00+02:00",
+    "endTime": "2025-06-09T23:00:00+02:00"
+  },
+  {
+    "id": "06-09-bohemian-betyars",
+    "artistId": "bohemian-betyars",
+    "dayId": "day-4",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-09T23:00:00+02:00",
+    "endTime": "2025-06-10T01:00:00+02:00"
+  },
+  {
+    "id": "06-09-zajnal-zenekar",
+    "artistId": "zajnal-zenekar",
+    "dayId": "day-4",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-09T20:30:00+02:00",
+    "endTime": "2025-06-09T21:30:00+02:00"
+  },
+  {
+    "id": "06-09-aznap-projekt",
+    "artistId": "aznap-projekt",
+    "dayId": "day-4",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-09T21:30:00+02:00",
+    "endTime": "2025-06-09T23:00:00+02:00"
+  },
+  {
+    "id": "06-09-onismereti-diszko",
+    "artistId": "onismereti-diszko",
+    "dayId": "day-4",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-09T23:00:00+02:00",
+    "endTime": "2025-06-10T01:00:00+02:00"
+  },
+  {
+    "id": "06-09-suefo-savages",
+    "artistId": "suefo-savages",
+    "dayId": "day-4",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-09T18:00:00+02:00",
+    "endTime": "2025-06-09T22:00:00+02:00"
+  },
+  {
+    "id": "06-09-kanada-kaosz",
+    "artistId": "kanada-kaosz",
+    "dayId": "day-4",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-09T22:00:00+02:00",
+    "endTime": "2025-06-09T23:30:00+02:00"
+  },
+  {
+    "id": "06-09-popdavec",
+    "artistId": "popdavec",
+    "dayId": "day-4",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-09T23:30:00+02:00",
+    "endTime": "2025-06-10T01:30:00+02:00"
+  },
+  {
+    "id": "06-09-milendee",
+    "artistId": "milendee",
+    "dayId": "day-4",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-09T20:00:00+02:00",
+    "endTime": "2025-06-09T21:30:00+02:00"
+  },
+  {
+    "id": "06-09-sztyepp",
+    "artistId": "sztyepp",
+    "dayId": "day-4",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-09T21:30:00+02:00",
+    "endTime": "2025-06-09T23:00:00+02:00"
+  },
+  {
+    "id": "06-09-nairobi",
+    "artistId": "nairobi",
+    "dayId": "day-4",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-09T23:00:00+02:00",
+    "endTime": "2025-06-10T01:00:00+02:00"
+  },
+  {
+    "id": "06-10-bujdoso-quartet",
+    "artistId": "bujdoso",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-10T20:30:00+02:00",
+    "endTime": "2025-06-10T21:30:00+02:00"
+  },
+  {
+    "id": "06-10-tombola",
+    "artistId": "tombola",
+    "dayId": "day-5",
+    "description": "Tombola sorsolás a kerti színpadon - értékes és eszmei ajándékok! Tomboljaegyet a Merch pult mellett tudtok venni.",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-10T21:30:00+02:00",
+    "endTime": "2025-06-10T22:00:00+02:00"
+  },
+  {
+    "id": "06-10-nagy-emma-quintet",
+    "artistId": "nagy-emma",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-10T22:00:00+02:00",
+    "endTime": "2025-06-10T23:00:00+02:00"
+  },
+  {
+    "id": "06-10-new-fossils",
+    "artistId": "new-fossils",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-10T23:00:00+02:00",
+    "endTime": "2025-06-11T01:00:00+02:00"
+  },
+  {
+    "id": "06-10-less-is-more-4",
+    "artistId": "less-is-more",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-10T21:30:00+02:00",
+    "endTime": "2025-06-10T22:40:00+02:00"
+  },
+  {
+    "id": "06-10-turul-blast",
+    "artistId": "turul-blast",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-10T22:40:00+02:00",
+    "endTime": "2025-06-11T00:00:00+02:00"
+  },
+  {
+    "id": "06-10-gentry-sultan",
+    "artistId": "gentry-sultan",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-11T00:00:00+02:00",
+    "endTime": "2025-06-11T02:00:00+02:00"
+  },
+  {
+    "id": "06-10-longman-tink",
+    "artistId": "longman-tink",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-10T20:00:00+02:00",
+    "endTime": "2025-06-10T21:30:00+02:00"
+  },
+  {
+    "id": "06-10-freakin-disco",
+    "artistId": "freakin-disco",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-10T21:30:00+02:00",
+    "endTime": "2025-06-10T23:30:00+02:00"
+  },
+  {
+    "id": "06-10-dj-apply",
+    "artistId": "dj-apply",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-10T23:30:00+02:00",
+    "endTime": "2025-06-11T01:30:00+02:00"
+  },
+  {
+    "id": "06-10-zotyka",
+    "artistId": "zotyka",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-10T18:00:00+02:00",
+    "endTime": "2025-06-10T22:00:00+02:00"
+  },
+  {
+    "id": "06-10-tomanek",
+    "artistId": "tomanek",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-10T22:00:00+02:00",
+    "endTime": "2025-06-10T23:30:00+02:00"
+  },
+  {
+    "id": "06-10-tink-angel26-oneab-sampletemple",
+    "artistId": "tink-angel-oneab",
+    "dayId": "day-5",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-10T23:30:00+02:00",
+    "endTime": "2025-06-11T01:30:00+02:00"
+  },
+  {
+    "id": "06-11-g-ras-roots-4ward",
+    "artistId": "g-ras-roots-4ward",
+    "dayId": "day-6",
+    "description": "akusztik",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-11T20:00:00+02:00",
+    "endTime": "2025-06-11T21:15:00+02:00"
+  },
+  {
+    "id": "06-11-tombola",
+    "artistId": "tombola",
+    "dayId": "day-6",
+    "description": "Tombola sorsolás a kerti színpadon - értékes és eszmei ajándékok! Tomboljaegyet a Merch pult mellett tudtok venni.",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-11T21:15:00+02:00",
+    "endTime": "2025-06-11T22:00:00+02:00"
+  },
+  {
+    "id": "06-11-sena-dagadub",
+    "artistId": "sena-dagadub",
+    "dayId": "day-6",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-11T21:45:00+02:00",
+    "endTime": "2025-06-11T23:00:00+02:00"
+  },
+  {
+    "id": "06-11-marley-80-reggae-jam",
+    "artistId": "marley-80-reggae-jam",
+    "dayId": "day-6",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-11T23:00:00+02:00",
+    "endTime": "2025-06-12T01:00:00+02:00"
+  },
+  {
+    "id": "06-11-dubapest-hifi-feat-haroon-ayyaz",
+    "artistId": "dubapest-hifi-feat-haroon-ayyaz",
+    "dayId": "day-6",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-11T22:00:00+02:00",
+    "endTime": "2025-06-12T00:00:00+02:00"
+  },
+  {
+    "id": "06-11-dr-analog-audiophile",
+    "artistId": "dr-analog-audiophile",
+    "dayId": "day-6",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-11T20:00:00+02:00",
+    "endTime": "2025-06-11T22:00:00+02:00"
+  },
+  {
+    "id": "06-11-italosafari-in-dub-it",
+    "artistId": "italosafari-in-dub-it",
+    "dayId": "day-6",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-11T22:00:00+02:00",
+    "endTime": "2025-06-12T00:00:00+02:00"
+  },
+  {
+    "id": "06-11-taxi-sound-system-selector-hemperor",
+    "artistId": "taxi-sound-system-selector-hemperor",
+    "dayId": "day-6",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-12T00:00:00+02:00",
+    "endTime": "2025-06-12T02:00:00+02:00"
+  },
+  {
+    "id": "06-11-mr-skunk-1",
+    "artistId": "mr-skunk",
+    "dayId": "day-6",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-11T18:00:00+02:00",
+    "endTime": "2025-06-11T19:00:00+02:00"
+  },
+  {
+    "id": "06-11-monkey-sound-system-ind",
+    "artistId": "monkey-sound-system-ind",
+    "dayId": "day-6",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-11T19:00:00+02:00",
+    "endTime": "2025-06-11T20:00:00+02:00"
+  },
+  {
+    "id": "06-11-dj-i-lab-lee-n-gum",
+    "artistId": "dj-i-lab-lee-n-gum",
+    "dayId": "day-6",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-11T22:00:00+02:00",
+    "endTime": "2025-06-12T00:00:00+02:00"
+  },
+  {
+    "id": "06-11-mr-skunk-2",
+    "artistId": "mr-skunk",
+    "dayId": "day-6",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-12T00:00:00+02:00",
+    "endTime": "2025-06-12T01:00:00+02:00"
+  },
+  {
+    "id": "06-11-dakta-dub",
+    "artistId": "dakta-dub",
+    "dayId": "day-6",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-12T01:00:00+02:00",
+    "endTime": "2025-06-12T03:00:00+02:00"
+  },
+  {
+    "id": "06-12-jubileumi-10-mutans-bringa",
+    "artistId": "alleycat",
+    "dayId": "day-7",
+    "description": "Mutáns Bringa Szépségverseny díjátadó!",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-12T19:00:00+02:00",
+    "endTime": "2025-06-12T19:30:00+02:00"
+  },
+  {
+    "id": "06-12-busa-pista-es-baratai",
+    "artistId": "busa-pista-es-baratai",
+    "dayId": "day-7",
+    "description": "LORD GYöReMIX, DJ HANZEE, TINK A MULATÓ AZTÉK, BUSA PISTA DJ SZETT, MANGANI 808 - live",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-12T19:30:00+02:00",
+    "endTime": "2025-06-12T21:30:00+02:00"
+  },
+  {
+    "id": "06-12-tombola",
+    "artistId": "tombola",
+    "dayId": "day-7",
+    "description": "Tombola sorsolás a kerti színpadon - értékes és eszmei ajándékok! Tomboljaegyet a Merch pult mellett tudtok venni.",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-12T21:30:00+02:00",
+    "endTime": "2025-06-12T22:00:00+02:00"
+  },
+  {
+    "id": "06-12-tudosok",
+    "artistId": "tudosok",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-12T22:00:00+02:00",
+    "endTime": "2025-06-12T23:30:00+02:00"
+  },
+  {
+    "id": "06-12-lopunk",
+    "artistId": "lopunk",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-12T23:30:00+02:00",
+    "endTime": "2025-06-13T01:30:00+02:00"
+  },
+  {
+    "id": "06-12-hiszteria",
+    "artistId": "hiszteria",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-12T19:20:00+02:00",
+    "endTime": "2025-06-12T20:00:00+02:00"
+  },
+  {
+    "id": "06-12-delirium-continuum",
+    "artistId": "delirium-continuum",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-12T20:00:00+02:00",
+    "endTime": "2025-06-12T20:45:00+02:00"
+  },
+  {
+    "id": "06-12-dogs-on-leads",
+    "artistId": "dogs-on-leads",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-12T20:45:00+02:00",
+    "endTime": "2025-06-12T21:50:00+02:00"
+  },
+  {
+    "id": "06-12-bloody-holly-and-the-ricketz",
+    "artistId": "bloody-holly-and-the-ricketz",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-12T21:50:00+02:00",
+    "endTime": "2025-06-12T23:00:00+02:00"
+  },
+  {
+    "id": "06-12-kugler",
+    "artistId": "kugler",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-12T23:00:00+02:00",
+    "endTime": "2025-06-13T00:00:00+02:00"
+  },
+  {
+    "id": "06-12-davoria",
+    "artistId": "davoria",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-13T00:00:00+02:00",
+    "endTime": "2025-06-13T05:00:00+02:00"
+  },
+  {
+    "id": "06-12-martenius",
+    "artistId": "martenius",
+    "dayId": "day-7",
+    "description": "chill, live",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-12T20:00:00+02:00",
+    "endTime": "2025-06-12T21:30:00+02:00"
+  },
+  {
+    "id": "06-12-cord",
+    "artistId": "cord",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-12T21:30:00+02:00",
+    "endTime": "2025-06-12T23:00:00+02:00"
+  },
+  {
+    "id": "06-12-amygdala",
+    "artistId": "amygdala",
+    "dayId": "day-7",
+    "description": "live",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-12T23:00:00+02:00",
+    "endTime": "2025-06-13T00:30:00+02:00"
+  },
+  {
+    "id": "06-12-brian-grassfield",
+    "artistId": "brian-grassfield",
+    "dayId": "day-7",
+    "description": "live",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-13T00:30:00+02:00",
+    "endTime": "2025-06-13T02:30:00+02:00"
+  },
+  {
+    "id": "06-12-s-witch-b2b-naut83",
+    "artistId": "s-witch-b2b-naut83",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-12T22:00:00+02:00",
+    "endTime": "2025-06-12T23:00:00+02:00"
+  },
+  {
+    "id": "06-12-mentalien",
+    "artistId": "mentalien",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-12T23:00:00+02:00",
+    "endTime": "2025-06-13T00:00:00+02:00"
+  },
+  {
+    "id": "06-12-magematix",
+    "artistId": "magematix",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-13T00:00:00+02:00",
+    "endTime": "2025-06-13T01:00:00+02:00"
+  },
+  {
+    "id": "06-12-yorinobu",
+    "artistId": "yorinobu",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-13T01:00:00+02:00",
+    "endTime": "2025-06-13T02:00:00+02:00"
+  },
+  {
+    "id": "06-12-damien",
+    "artistId": "damien",
+    "dayId": "day-7",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-13T02:00:00+02:00",
+    "endTime": "2025-06-13T04:00:00+02:00"
+  },
+  {
+    "id": "06-13-eklektik-jam",
+    "artistId": "eklektik-jam",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-13T20:30:00+02:00",
+    "endTime": "2025-06-13T21:30:00+02:00"
+  },
+  {
+    "id": "06-13-tombola",
+    "artistId": "tombola",
+    "dayId": "day-8",
+    "description": "Tombola sorsolás a kerti színpadon - értékes és eszmei ajándékok! Tomboljaegyet a Merch pult mellett tudtok venni.",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-13T21:30:00+02:00",
+    "endTime": "2025-06-13T22:00:00+02:00"
+  },
+  {
+    "id": "06-13-berlin-hotel-collective",
+    "artistId": "berlin-hotel-collective",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-13T22:00:00+02:00",
+    "endTime": "2025-06-13T23:00:00+02:00"
+  },
+  {
+    "id": "06-13-jazzbois",
+    "artistId": "jazzbois",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-13T23:00:00+02:00",
+    "endTime": "2025-06-14T00:30:00+02:00"
+  },
+  {
+    "id": "06-13-vedat-akdag",
+    "artistId": "vedat-akdag",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-14T00:30:00+02:00",
+    "endTime": "2025-06-14T02:00:00+02:00"
+  },
+  {
+    "id": "06-13-dtnb",
+    "artistId": "dtnb",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-14T02:00:00+02:00",
+    "endTime": "2025-06-14T04:00:00+02:00"
+  },
+  {
+    "id": "06-13-loophia",
+    "artistId": "loophia",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-13T20:30:00+02:00",
+    "endTime": "2025-06-13T21:30:00+02:00"
+  },
+  {
+    "id": "06-13-kaltes-ekwa",
+    "artistId": "kaltes-ekwa",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-13T21:30:00+02:00",
+    "endTime": "2025-06-13T22:45:00+02:00"
+  },
+  {
+    "id": "06-13-yzzo",
+    "artistId": "yzzo",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-13T22:45:00+02:00",
+    "endTime": "2025-06-14T00:00:00+02:00"
+  },
+  {
+    "id": "06-13-oiee-dj-set",
+    "artistId": "oiee-dj-set",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-14T00:00:00+02:00",
+    "endTime": "2025-06-14T01:00:00+02:00"
+  },
+  {
+    "id": "06-13-yorgos",
+    "artistId": "yorgos",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-14T01:00:00+02:00",
+    "endTime": "2025-06-14T02:30:00+02:00"
+  },
+  {
+    "id": "06-13-csokicsibesz",
+    "artistId": "csokicsibesz",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-14T02:30:00+02:00",
+    "endTime": "2025-06-14T04:30:00+02:00"
+  },
+  {
+    "id": "06-13-urban-vinyl",
+    "artistId": "urban-vinyl",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-13T20:00:00+02:00",
+    "endTime": "2025-06-13T22:00:00+02:00"
+  },
+  {
+    "id": "06-13-pigment-chemcal-live",
+    "artistId": "pigment-chemcal-live",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-13T22:00:00+02:00",
+    "endTime": "2025-06-13T23:00:00+02:00"
+  },
+  {
+    "id": "06-13-mental-it",
+    "artistId": "mental-it",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-13T23:00:00+02:00",
+    "endTime": "2025-06-14T00:30:00+02:00"
+  },
+  {
+    "id": "06-13-vatsanah",
+    "artistId": "vatsanah",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-14T00:30:00+02:00",
+    "endTime": "2025-06-14T02:30:00+02:00"
+  },
+  {
+    "id": "06-13-gaulamin",
+    "artistId": "gaulamin",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-14T02:30:00+02:00",
+    "endTime": "2025-06-14T04:30:00+02:00"
+  },
+  {
+    "id": "06-13-nippon-groove",
+    "artistId": "nippon-groove",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-13T22:00:00+02:00",
+    "endTime": "2025-06-13T23:30:00+02:00"
+  },
+  {
+    "id": "06-13-sanyi",
+    "artistId": "sanyi",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-13T23:30:00+02:00",
+    "endTime": "2025-06-14T01:00:00+02:00"
+  },
+  {
+    "id": "06-13-minek-b2b-minich",
+    "artistId": "minek-b2b-minich",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-14T01:00:00+02:00",
+    "endTime": "2025-06-14T02:30:00+02:00"
+  },
+  {
+    "id": "06-13-waxman",
+    "artistId": "waxman",
+    "dayId": "day-8",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-14T02:30:00+02:00",
+    "endTime": "2025-06-14T04:30:00+02:00"
+  },
+  {
+    "id": "06-14-shakar-trio",
+    "artistId": "shakar-trio",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-14T20:30:00+02:00",
+    "endTime": "2025-06-14T21:30:00+02:00"
+  },
+  {
+    "id": "06-14-tombola",
+    "artistId": "tombola",
+    "dayId": "day-9",
+    "description": "Tombola sorsolás a kerti színpadon - értékes és eszmei ajándékok! Tomboljaegyet a Merch pult mellett tudtok venni.",
+    "stageId": "kerti-szinpad",
+    "startTime": "2025-06-14T21:30:00+02:00",
+    "endTime": "2025-06-14T22:00:00+02:00"
+  },
+  {
+    "id": "06-14-nunki-bay-starship",
+    "artistId": "nunki-bay-starship",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-14T22:00:00+02:00",
+    "endTime": "2025-06-14T23:00:00+02:00"
+  },
+  {
+    "id": "06-14-anima-sound-system",
+    "artistId": "anima-sound-system",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-14T23:00:00+02:00",
+    "endTime": "2025-06-15T00:30:00+02:00"
+  },
+  {
+    "id": "06-14-infragandhi",
+    "artistId": "infragandhi",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-15T00:30:00+02:00",
+    "endTime": "2025-06-15T02:00:00+02:00"
+  },
+  {
+    "id": "06-14-dj-titusz",
+    "artistId": "dj-titusz",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "nagyszinpad",
+    "startTime": "2025-06-15T02:00:00+02:00",
+    "endTime": "2025-06-15T04:00:00+02:00"
+  },
+  {
+    "id": "06-14-swim-swim-naked",
+    "artistId": "swim-swim-naked",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-14T21:00:00+02:00",
+    "endTime": "2025-06-14T22:00:00+02:00"
+  },
+  {
+    "id": "06-14-xcolabor",
+    "artistId": "xcolabor",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-14T22:00:00+02:00",
+    "endTime": "2025-06-14T23:00:00+02:00"
+  },
+  {
+    "id": "06-14-the-hybrid-drummer-duo",
+    "artistId": "the-hybrid-drummer-duo",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "kisterem",
+    "startTime": "2025-06-14T23:00:00+02:00",
+    "endTime": "2025-06-15T00:30:00+02:00"
+  },
+  {
+    "id": "06-14-flanger-kids",
+    "artistId": "flanger-kids",
+    "dayId": "day-9",
+    "description": "Backpack Session live set",
+    "stageId": "kisterem",
+    "startTime": "2025-06-15T00:30:00+02:00",
+    "endTime": "2025-06-15T01:30:00+02:00"
+  },
+  {
+    "id": "06-14-bobby-shyze",
+    "artistId": "bobby-shyze",
+    "dayId": "day-9",
+    "description": "live",
+    "stageId": "kisterem",
+    "startTime": "2025-06-15T01:30:00+02:00",
+    "endTime": "2025-06-15T02:30:00+02:00"
+  },
+  {
+    "id": "06-14-bernathy",
+    "artistId": "bernathy",
+    "dayId": "day-9",
+    "description": "live",
+    "stageId": "kisterem",
+    "startTime": "2025-06-15T02:30:00+02:00",
+    "endTime": "2025-06-15T04:30:00+02:00"
+  },
+  {
+    "id": "06-14-formatc",
+    "artistId": "formatc",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-14T20:00:00+02:00",
+    "endTime": "2025-06-14T21:30:00+02:00"
+  },
+  {
+    "id": "06-14-lau",
+    "artistId": "lau",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-14T21:30:00+02:00",
+    "endTime": "2025-06-14T23:00:00+02:00"
+  },
+  {
+    "id": "06-14-adis-is-ok",
+    "artistId": "adis-is-ok",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-14T23:00:00+02:00",
+    "endTime": "2025-06-15T00:30:00+02:00"
+  },
+  {
+    "id": "06-14-pizza-amore",
+    "artistId": "pizza-amore",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-15T00:30:00+02:00",
+    "endTime": "2025-06-15T02:00:00+02:00"
+  },
+  {
+    "id": "06-14-seldon-blez",
+    "artistId": "seldon-blez",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "cokxpon",
+    "startTime": "2025-06-15T02:00:00+02:00",
+    "endTime": "2025-06-15T04:00:00+02:00"
+  },
+  {
+    "id": "06-14-deli-front-upment",
+    "artistId": "deli-front-upment",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-14T22:00:00+02:00",
+    "endTime": "2025-06-15T00:00:00+02:00"
+  },
+  {
+    "id": "06-14-smokin-headz",
+    "artistId": "smokin-headz",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-15T00:00:00+02:00",
+    "endTime": "2025-06-15T02:00:00+02:00"
+  },
+  {
+    "id": "06-14-dj-clairvo-mustbeat-crew",
+    "artistId": "dj-clairvo-mustbeat-crew",
+    "dayId": "day-9",
+    "description": "",
+    "stageId": "kerti-dj",
+    "startTime": "2025-06-15T02:00:00+02:00",
+    "endTime": "2025-06-15T04:00:00+02:00"
+  },
+  {
+    "id": "06-06-7terito",
+    "artistId": "7terito",
+    "dayId": "day-1",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-06T16:00:00+02:00",
+    "endTime": "2025-06-06T20:30:00+02:00"
+  },
+  {
+    "id": "06-06-csetesek",
+    "artistId": "csetesek",
+    "dayId": "day-1",
+    "description": "Kreol Jambalaya",
+    "stageId": "bogracs",
+    "startTime": "2025-06-06T18:30:00+02:00",
+    "endTime": "2025-06-06T22:00:00+02:00"
+  },
+  {
+    "id": "06-06-balkani-borsok",
+    "artistId": "balkani-borsok",
+    "dayId": "day-1",
+    "description": "Gyuvecs, fermentált tojással, VEGA",
+    "stageId": "bogracs",
+    "startTime": "2025-06-06T18:30:00+02:00",
+    "endTime": "2025-06-06T22:00:00+02:00"
+  },
+  {
+    "id": "06-07-icecream-open-mic",
+    "artistId": "icecream-open-mic",
+    "dayId": "day-2",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-07T16:00:00+02:00",
+    "endTime": "2025-06-07T18:00:00+02:00"
+  },
+  {
+    "id": "06-07-mauvaises-ondes",
+    "artistId": "mauvaises-ondes",
+    "dayId": "day-2",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-07T18:00:00+02:00",
+    "endTime": "2025-06-07T20:00:00+02:00"
+  },
+  {
+    "id": "06-07-start-galeria",
+    "artistId": "start-galeria",
+    "dayId": "day-2",
+    "description": "Csirkecurry kuszkusszal",
+    "stageId": "bogracs",
+    "startTime": "2025-06-07T18:30:00+02:00",
+    "endTime": "2025-06-07T22:00:00+02:00"
+  },
+  {
+    "id": "06-07-csonkamagyarorszag",
+    "artistId": "csonkamagyarorszag",
+    "dayId": "day-2",
+    "description": "Sokfüves Harira, VEGÁN",
+    "stageId": "bogracs",
+    "startTime": "2025-06-07T18:30:00+02:00",
+    "endTime": "2025-06-07T22:00:00+02:00"
+  },
+  {
+    "id": "06-08-kutyajo-buli",
+    "artistId": "kutyajo-buli",
+    "dayId": "day-3",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-08T14:00:00+02:00",
+    "endTime": "2025-06-08T18:00:00+02:00"
+  },
+  {
+    "id": "06-08-heti-betevo-csirkepapi",
+    "artistId": "heti-betevo",
+    "dayId": "day-3",
+    "description": "Csirkepapi bulgurral",
+    "stageId": "bogracs",
+    "startTime": "2025-06-08T14:00:00+02:00",
+    "endTime": "2025-06-08T22:00:00+02:00"
+  },
+  {
+    "id": "06-08-heti-betevo-tabbouleh",
+    "artistId": "heti-betevo",
+    "dayId": "day-3",
+    "description": "Hétzöldséges Tabbouleh, VEGÁN",
+    "stageId": "bogracs",
+    "startTime": "2025-06-08T14:00:00+02:00",
+    "endTime": "2025-06-08T22:00:00+02:00"
+  },
+  {
+    "id": "06-09-zarandokok-majom-a-vizben-amiirol-nem-lehet-beszelni",
+    "artistId": "zarandokok-majom-a-vizben-amiirol-nem-lehet-beszelni",
+    "dayId": "day-4",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-09T16:00:00+02:00",
+    "endTime": "2025-06-09T18:00:00+02:00"
+  },
+  {
+    "id": "06-09-budapest-eklektik-nepzene",
+    "artistId": "budapest-eklektik-nepzene",
+    "dayId": "day-4",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-09T18:00:00+02:00",
+    "endTime": "2025-06-09T20:00:00+02:00"
+  },
+  {
+    "id": "06-09-majom-a-vizben-torzshallgatok",
+    "artistId": "majom-a-vizben-torzshallgatok",
+    "dayId": "day-4",
+    "description": "Bigos",
+    "stageId": "bogracs",
+    "startTime": "2025-06-09T18:30:00+02:00",
+    "endTime": "2025-06-09T22:00:00+02:00"
+  },
+  {
+    "id": "06-09-menedek-egyesulet",
+    "artistId": "menedek-egyesulet",
+    "dayId": "day-4",
+    "description": "Marokkói Fúziós Harira (VEGÁN)",
+    "stageId": "bogracs",
+    "startTime": "2025-06-09T18:30:00+02:00",
+    "endTime": "2025-06-09T22:00:00+02:00"
+  },
+  {
+    "id": "06-10-direkt36",
+    "artistId": "direkt36",
+    "dayId": "day-5",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-10T16:00:00+02:00",
+    "endTime": "2025-06-10T18:00:00+02:00"
+  },
+  {
+    "id": "06-10-totumfaktum",
+    "artistId": "totumfaktum",
+    "dayId": "day-5",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-10T18:00:00+02:00",
+    "endTime": "2025-06-10T20:00:00+02:00"
+  },
+  {
+    "id": "06-10-csonkamagyarorszag",
+    "artistId": "csonkamagyarorszag",
+    "dayId": "day-5",
+    "description": "Ciprusi Mazsolás Pacal",
+    "stageId": "bogracs",
+    "startTime": "2025-06-10T18:30:00+02:00",
+    "endTime": "2025-06-10T22:00:00+02:00"
+  },
+  {
+    "id": "06-10-helyettes-reggeli",
+    "artistId": "helyettes-reggeli",
+    "dayId": "day-5",
+    "description": "Palócleves",
+    "stageId": "bogracs",
+    "startTime": "2025-06-10T18:30:00+02:00",
+    "endTime": "2025-06-10T22:00:00+02:00"
+  },
+  {
+    "id": "06-11-szamarpad",
+    "artistId": "szamarpad",
+    "dayId": "day-6",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-11T16:30:00+02:00",
+    "endTime": "2025-06-11T18:00:00+02:00"
+  },
+  {
+    "id": "06-11-es-ti-mibkben-vagytok",
+    "artistId": "es-ti-mibkben-vagytok",
+    "dayId": "day-6",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-11T18:00:00+02:00",
+    "endTime": "2025-06-11T20:00:00+02:00"
+  },
+  {
+    "id": "06-11-szerkesztoseg",
+    "artistId": "szerkesztoseg",
+    "dayId": "day-6",
+    "description": "Csavart Gulyás",
+    "stageId": "bogracs",
+    "startTime": "2025-06-11T18:30:00+02:00",
+    "endTime": "2025-06-11T22:00:00+02:00"
+  },
+  {
+    "id": "06-11-helyettes-reggeli-orom",
+    "artistId": "helyettes-reggeli",
+    "dayId": "day-6",
+    "description": "Örömpörkölt (VEGÁN)",
+    "stageId": "bogracs",
+    "startTime": "2025-06-11T18:30:00+02:00",
+    "endTime": "2025-06-11T22:00:00+02:00"
+  },
+  {
+    "id": "06-12-bandita-radio",
+    "artistId": "bandita-radio",
+    "dayId": "day-7",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-12T16:00:00+02:00",
+    "endTime": "2025-06-12T18:00:00+02:00"
+  },
+  {
+    "id": "06-12-bandita-radio-paholy",
+    "artistId": "bandita-radio-paholy",
+    "dayId": "day-7",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-12T18:00:00+02:00",
+    "endTime": "2025-06-12T20:00:00+02:00"
+  },
+  {
+    "id": "06-12-banditaradio-kitchenallstars",
+    "artistId": "banditaradio-kitchenallstars",
+    "dayId": "day-7",
+    "description": "Bandita Bogrács",
+    "stageId": "bogracs",
+    "startTime": "2025-06-12T18:30:00+02:00",
+    "endTime": "2025-06-12T22:00:00+02:00"
+  },
+  {
+    "id": "06-12-budapest-bike-maffia",
+    "artistId": "budapest-bike-maffia",
+    "dayId": "day-7",
+    "description": "A maharadzsa fűszeres kincse a la Bike Maffia (VEGA)",
+    "stageId": "bogracs",
+    "startTime": "2025-06-12T18:30:00+02:00",
+    "endTime": "2025-06-12T22:00:00+02:00"
+  },
+  {
+    "id": "06-13-utcaradio",
+    "artistId": "utcaradio",
+    "dayId": "day-8",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-13T16:00:00+02:00",
+    "endTime": "2025-06-13T18:00:00+02:00"
+  },
+  {
+    "id": "06-13-szex-akcio-hircsoport",
+    "artistId": "szex-akcio-hircsoport",
+    "dayId": "day-8",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-13T18:00:00+02:00",
+    "endTime": "2025-06-13T20:00:00+02:00"
+  },
+  {
+    "id": "06-13-szex-akcio-hircsoport-bogracs",
+    "artistId": "szex-akcio-hircsoport",
+    "dayId": "day-8",
+    "description": "Káposztáskondér",
+    "stageId": "bogracs",
+    "startTime": "2025-06-13T18:30:00+02:00",
+    "endTime": "2025-06-13T22:00:00+02:00"
+  },
+  {
+    "id": "06-13-budapest-eklektik",
+    "artistId": "budapest-eklektik",
+    "dayId": "day-8",
+    "description": "Eklecsó - opcionális kolbásszal (VEGA)",
+    "stageId": "bogracs",
+    "startTime": "2025-06-13T18:30:00+02:00",
+    "endTime": "2025-06-13T22:00:00+02:00"
+  },
+  {
+    "id": "06-14-csonkamagyarorszag",
+    "artistId": "csonkamagyarorszag",
+    "dayId": "day-9",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-14T16:00:00+02:00",
+    "endTime": "2025-06-14T18:00:00+02:00"
+  },
+  {
+    "id": "06-14-lechtturm",
+    "artistId": "lechtturm",
+    "dayId": "day-9",
+    "description": "Élő közvetítés a Dürer Kertből",
+    "stageId": "tilos-caravan-studio",
+    "startTime": "2025-06-14T18:00:00+02:00",
+    "endTime": "2025-06-14T20:00:00+02:00"
+  },
+  {
+    "id": "06-14-tuznyul",
+    "artistId": "tuznyul",
+    "dayId": "day-9",
+    "description": "Csülkös Gezemice",
+    "stageId": "bogracs",
+    "startTime": "2025-06-14T18:30:00+02:00",
+    "endTime": "2025-06-14T22:00:00+02:00"
+  },
+  {
+    "id": "06-14-onismereti-bogracs",
+    "artistId": "onismereti-bogracs",
+    "dayId": "day-9",
+    "description": "Tanult Ehetetlenség (VEGA)",
+    "stageId": "bogracs",
+    "startTime": "2025-06-14T18:30:00+02:00",
+    "endTime": "2025-06-14T22:00:00+02:00"
+  },
+  {
+    "id": "06-08-kerti-programok",
+    "artistId": "kerti-programok",
+    "dayId": "day-3",
+    "description": "Kézműveskedés Chochol Etelkával és Zagyvai Dórival; Kulimász - Játék és tér mindenkinek!; Agyagozás Tóth Ágival; Arcfestés",
+    "stageId": "etc",
+    "startTime": "2025-06-08T14:00:00+02:00",
+    "endTime": "2025-06-08T18:00:00+02:00"
+  },
+  {
+    "id": "06-12-mutansbringa",
+    "artistId": "mutansbringa",
+    "dayId": "day-7",
+    "description": "Tizedik alkalommal kerül megrendezésre a Mutánsbringa felvonulás, hagyományosan a Tilos Maraton csütörtöki Bringanapján, délután 5-től. Gyülekező a Városháza Parkban, majd vonulás a Kiskörúton, át a Szabi-hídon a Kopaszi gátig, célállomás pedig a Dürer Kert lesz, ahol idén is megrendezésre kerül a Mutánsbringa Szépségverseny.",
+    "stageId": "etc",
+    "startTime": "2025-06-12T17:45:00+02:00",
+    "endTime": "2025-06-12T19:00:00+02:00"
+  },
+  {
+    "id": "06-12-en-es-a-bringam",
+    "artistId": "mutansbringa",
+    "dayId": "day-7",
+    "description": "Én és a bringám fotózás a kertben",
+    "stageId": "etc",
+    "startTime": "2025-06-12T16:00:00+02:00",
+    "endTime": "2025-06-12T20:00:00+02:00"
+  },
+  {
+    "id": "06-12-goldsprint",
+    "artistId": "royal-fixi-club",
+    "dayId": "day-7",
+    "description": "Goldsprint - kerékpáros görgőverseny a kertben (+DJ Bajtárs)",
+    "stageId": "etc",
+    "startTime": "2025-06-12T16:00:00+02:00",
+    "endTime": "2025-06-12T20:00:00+02:00"
+  },
+  {
+    "id": "06-12-bringaszerviz",
+    "artistId": "royal-fixi-club",
+    "dayId": "day-7",
+    "description": "Bringaszerviz a kertben (adományért cserébe)",
+    "stageId": "etc",
+    "startTime": "2025-06-12T16:00:00+02:00",
+    "endTime": "2025-06-12T20:00:00+02:00"
   }
 ]

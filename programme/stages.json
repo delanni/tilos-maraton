@@ -1,37 +1,74 @@
 [
   {
     "id": "kerti-szinpad",
-    "name": "KERTI SZÍNPAD",
-    "description": "Nagyszínpad a kertben"
+    "name": "Kerti színpad",
+    "description": "Nagyszínpad a kertben",
+    "icon": "🌳",
+    "offsetX": 1228,
+    "offsetY": 784
   },
   {
     "id": "nagyszinpad",
-    "name": "NAGYSZÍNPAD",
-    "description": "A tágas beltéri nagyszínpad"
+    "name": "Nagyszínpad",
+    "description": "Tágas beltéri nagyszínpad",
+    "icon": "🎤",
+    "offsetX": 565,
+    "offsetY": 361
   },
   {
     "id": "kisterem",
-    "name": "KISTEREM",
-    "description": "Fülledt beltéri kisterem"
+    "name": "Kisterem",
+    "description": "Családias beltéri táncterem",
+    "icon": "🕺🏻",
+    "offsetX": 546,
+    "offsetY": 548
   },
   {
     "id": "cokxpon",
-    "name": "CÖKXPÔN",
-    "description": "Hangulatos színpad az emeleten, a Fotelbárban"
+    "name": "Cökxpôn Zone",
+    "description": "A Cökxpôn Ambient Society az elmúlt évekhez hasonlóan idén is önálló helyszínnel egészíti ki a Tilos Maraton programját. A fesztivál teljes ideje alatt a már megszokott, varázslatos atmoszférát teremtő dekoráció és fényfestés mellett változatos, az ambienttől a dubon és jazzen át a 4/4-es műfajokig átívelő zenei programokkal, liveact-ekkel és workshopokkal várjuk a bulizni vágyókat - a Duna-part helyett idén már a Fotelbárban, a Dürer Kert épületének emeletén.",
+    "icon": "💺",
+    "offsetX": 880,
+    "offsetY": 475
   },
   {
     "id": "kerti-dj",
-    "name": "DJ A KERTBEN",
-    "description": "Tánctér a kertben (miután a kerti színpadon vége a programnak)"
+    "name": "Kerti DJ",
+    "description": "Tánctér a kertben, a pultoknál",
+    "icon": "🪩",
+    "offsetX": 1154,
+    "offsetY": 625
   },
   {
     "id": "tilos-caravan-studio",
-    "name": "TILOS CARAVAN STÚDIÓ",
-    "description": "Élő bejelentkezés a Dürer Kertből"
+    "name": "Tilos Caravan Stúdió",
+    "description": "Élő rádiós bejelentkezések a Dürer Kertből",
+    "icon": "🎙️",
+    "offsetX": 660,
+    "offsetY": 666
   },
   {
     "id": "bogracs",
-    "name": "BOGRÁCS",
-    "description": "Kerti konyha, a kerti színpad mellett. Minden nap 2 féle (húsos/vega) étellel"
+    "name": "Bogrács",
+    "description": "Kerti konyha, minden nap 2 féle étellel",
+    "icon": "🍜",
+    "offsetX": 1354,
+    "offsetY": 693
+  },
+  {
+    "id": "merch",
+    "name": "Adománypult",
+    "description": "Kedvenc műsorkészítőid/önkénteseid, Tilosos cuccok, tombola, bográcsjegy",
+    "icon": "🧢",
+    "offsetX": 957,
+    "offsetY": 803
+  }, {
+    "hidden": true,
+    "id": "etc",
+    "name": "Egyéb helyszínek",
+    "description": "Programok, valahol a kertben vagy azon túl :)",
+    "icon": "",
+    "offsetX": 0,
+    "offsetY": 0
   }
 ]

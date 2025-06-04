@@ -24,6 +24,10 @@ export interface Stage {
   id: string;
   name: string;
   description: string;
+  icon: string;
+  offsetX: number;
+  offsetY: number;
+  hidden?: boolean;
 }
 
 export interface Performance {
@@ -44,10 +48,8 @@ export interface FestivalInfo {
   contact: string;
   address: string;
   year: number;
-  facebookEvent: string;
-  ticketsLink: string;
   timezone: string;
-  description: string;
+  description: string[];
   generalDirectives: string[];
   faq: Array<{ question: string; answer: string }>;
   contacts: Array<{
@@ -56,4 +58,5 @@ export interface FestivalInfo {
     email: string;
     phone: string;
   }>;
+  links: Record<string, { name: string; url: string }>;
 }

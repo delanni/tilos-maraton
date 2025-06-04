@@ -35,7 +35,7 @@ export const DayPage: React.FC = () => {
   const dayInfo = useLoaderData() as DayPageData;
 
   return (
-    <BasePage title={dayInfo.name}>
+    <BasePage>
       <div className="space-y-8">
         {/* Day Header */}
         <div
