@@ -32,6 +32,10 @@
       "name": "Műsorfüzet",
       "url": "https://issuu.com/krizeklics/docs/tilos_maraton_pogramfuzet_2025"
     },
+    "donate": {
+      "name": "Támogass!",
+      "url": "https://tilos.hu/tamogatas"
+    },
     "tickets": {
       "name": "Támogatói jegyek",
       "url": "https://tixa.hu/tilos-maraton-2025-adas-van-20250606"
@@ -57,7 +61,7 @@
   "contacts": [
     {
       "name": "Szabó Alex",
-      "role": "Timetable maintainer",
+      "role": "Mobil programfüzet karbantartó",
       "email": "delanni.alex@gmail.com",
       "phone": ""
     }

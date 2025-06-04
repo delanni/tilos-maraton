@@ -32,6 +32,14 @@ rm -rf src biome.json index.html package.json yarn.lock postcss.config.js vite.c
 
 # Extract dist
 mv dist/* .
+
+# Rewrite all non /tilos-maraton/* paths to /tilos-maraton/ in index.html
+sed -i '' -E 's/(href="|src=")\/([^"]*)/\1\/tilos-maraton\/\2/g' index.html
+
+# Deduplicate any duplications introduced
+sed -i '' -E 's/\/tilos-maraton\/tilos-maraton\//\/tilos-maraton\//g' index.html
+
+# Copy index.html to 404.html (fallback for github pages routing behaviour)
 cp index.html 404.html
 
 # Add files
