@@ -50,8 +50,8 @@ export const loadTimetableData = (): TimetableLoaderData => {
 
 export const TimetablePage: React.FC = () => {
   const { performances, days } = useLoaderData() as TimetableLoaderData;
-  const [activeDayId, setActiveDayId] = useState<string>("");
-  const [activeStageId, setActiveStageId] = useState<string>("");
+  const [activeDayId, setActiveDayId] = useState<string>(localStorage.getItem("activeDayId") || "");
+  const [activeStageId, setActiveStageId] = useState<string>(localStorage.getItem("activeStageId") || "");
   const stages = getAllStages().filter((stage) => !stage.hidden && stage.id !== 'merch');
 
   useEffect(() => {
@@ -71,10 +71,12 @@ export const TimetablePage: React.FC = () => {
 
   const handleDayChange = (dayId: string) => {
     setActiveDayId(dayId);
+    localStorage.setItem("activeDayId", dayId);
   };
 
   const handleStageChange = (stageId: string) => {
     setActiveStageId(stageId);
+    localStorage.setItem("activeStageId", stageId);
   };
 
   // Filter and sort performances for the active day and selected stage
@@ -182,7 +184,7 @@ export const TimetablePage: React.FC = () => {
               <Link to={`/performance/${performance.id}`}>
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
                   <div>
-                    <h3 className="font-bold text-lg">
+                    <h3 className="font-bold text-lg" style={{ color: performance.day?.themeColors?.primary }}>
                       {getArtistDisplayName(performance.artist)}
                     </h3>
                     <p className="text-gray-600">
