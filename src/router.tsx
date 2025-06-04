@@ -12,10 +12,8 @@ import { DayPage, loadDayPageData } from "./pages/DayPage";
 import { SearchPage, loadSearchPageData } from "./pages/SearchPage";
 import MapPage, { loadMapPageData } from "./pages/MapPage";
 
-// Create the router
 export const router = createBrowserRouter([
   {
-    path: "/",
     element: <App />,
     children: [
       {
@@ -60,4 +58,6 @@ export const router = createBrowserRouter([
       },
     ],
   },
-]);
+], {
+  //* basename: "/tilos-maraton", // will be uncommented pre-gh-builds
+});
