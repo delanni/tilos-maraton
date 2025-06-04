@@ -1,6 +1,5 @@
 export const formatTime2Digit = (dateOrString: Date | string) => {
-  const date =
-    typeof dateOrString === "string" ? new Date(dateOrString) : dateOrString;
+  const date = typeof dateOrString === "string" ? new Date(dateOrString) : dateOrString;
   return date.toLocaleTimeString("hu-HU", {
     hour: "2-digit",
     minute: "2-digit",
@@ -8,12 +7,11 @@ export const formatTime2Digit = (dateOrString: Date | string) => {
 };
 
 export const formatDate = (dateOrString: string | Date) => {
-  const date =
-    typeof dateOrString === "string" ? new Date(dateOrString) : dateOrString;
+  const date = typeof dateOrString === "string" ? new Date(dateOrString) : dateOrString;
   return date.toLocaleDateString("hu-HU", {
     year: "numeric",
     month: "long",
-    day: "numeric"
+    day: "numeric",
   });
 };
 

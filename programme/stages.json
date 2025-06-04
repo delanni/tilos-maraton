@@ -62,7 +62,8 @@
     "icon": "🧢",
     "offsetX": 957,
     "offsetY": 803
-  }, {
+  },
+  {
     "hidden": true,
     "id": "etc",
     "name": "Egyéb helyszínek",

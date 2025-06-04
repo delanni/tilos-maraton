@@ -8,22 +8,20 @@ import {
   getDayById,
 } from "../services/dataService";
 import type { Stage, Performance, Artist, Day } from "../types";
-import { formatTime2Digit } from "../lib/formatTime";
+import { PerformanceCard } from "../components/PerformanceCard";
 import MapComponent from "../components/MapComponent";
-import PerformanceTimeLabel from "../components/PerformanceTimeLabel";
 
-type PerformanceWithDetails = Performance & {
+interface PerformanceWithDetails extends Performance {
   artist: Artist | undefined;
   day: Day | undefined;
-};
+  stage: Stage | undefined;
+}
 
 type StagePageData = Stage & {
   performances: PerformanceWithDetails[];
 };
 
-export const loadStagePageData: LoaderFunction<StagePageData> = ({
-  params,
-}) => {
+export const loadStagePageData: LoaderFunction<StagePageData> = ({ params }) => {
   const stageId = params.id;
   if (!stageId) {
     throw new Response("Stage ID is required", { status: 400 });
@@ -44,9 +42,21 @@ export const loadStagePageData: LoaderFunction<StagePageData> = ({
 };
 
 export const StagePage: React.FC = () => {
-  const stage = useLoaderData() as StagePageData;
+  const stage = useLoaderData() as StagePageData & { performances: PerformanceWithDetails[] };
 
-  const upcomingPerformances = stage.performances
+  const upcomingPerformances: PerformanceWithDetails[] = stage.performances
+    .map((performance): PerformanceWithDetails => {
+      const stage = getStageById(performance.stageId);
+      const day = getDayById(performance.dayId);
+      const artist = getArtistById(performance.artistId);
+
+      return {
+        ...performance,
+        stage,
+        day,
+        artist,
+      };
+    })
     .filter((performance) => {
       const now = new Date();
       const start = new Date(performance.startTime);
@@ -89,9 +99,7 @@ export const StagePage: React.FC = () => {
                 <div className="border rounded-lg overflow-hidden">
                   <div className="bg-gray-50 p-4 border-b font-medium">
                     <div className="mt-6">
-                      <h3 className="text-xl font-semibold mb-3">
-                        Közelgő események
-                      </h3>
+                      <h3 className="text-xl font-semibold mb-3">Közelgő események</h3>
                       <div className="space-y-4">
                         {upcomingPerformances.slice(0, 5).map((performance) => (
                           <UpcomingPerformanceCard performance={performance} />
@@ -125,37 +133,16 @@ function UpcomingPerformanceCard({
   performance: PerformanceWithDetails;
 }) {
   return (
-    <Link to={`/performance/${performance.id}`} key={performance.id}>
-      <div className="mb-6">
-        <div className="space-y-3">
-          <div className="p-4 border rounded-lg hover:bg-gray-50 w-full">
-            <div>
-              <div className="font-medium">
-                {performance.artist?.name}
-                {performance.artist?.collective &&
-                  ` (${performance.artist.collective})`}
-                {" • "}
-                <PerformanceTimeLabel performance={performance} full />
-              </div>
-              <div
-                className="text-sm text-gray-600 rounded-full px-2 py-1"
-                style={{
-                  backgroundColor: performance.day?.themeColors?.background,
-                  color: performance.day?.themeColors?.text,
-                }}
-              >
-                {performance.day?.name}
-              </div>
-              {performance.description && (
-                <p className="text-sm text-gray-600">
-                  {performance.description}
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    </Link>
+    <div className="mb-4">
+      <PerformanceCard
+        performance={{
+          ...performance,
+          artist: performance.artist || undefined,
+          stage: performance.stage || undefined,
+          day: performance.day || undefined,
+        }}
+      />
+    </div>
   );
 }
 

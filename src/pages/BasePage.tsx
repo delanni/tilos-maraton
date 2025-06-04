@@ -5,10 +5,7 @@ type BasePageProps = {
   className?: string;
 };
 
-export const BasePage: React.FC<BasePageProps> = ({
-  children,
-  className = "",
-}) => {
+export const BasePage: React.FC<BasePageProps> = ({ children, className = "" }) => {
   return (
     <div className={`container mx-auto px-4 ${className}`}>
       <div className="bg-white rounded-lg shadow-md p-6">{children}</div>
@@ -16,9 +13,7 @@ export const BasePage: React.FC<BasePageProps> = ({
   );
 };
 
-export const withBasePage = <P extends object>(
-  WrappedComponent: React.ComponentType<P>,
-) => {
+export const withBasePage = <P extends object>(WrappedComponent: React.ComponentType<P>) => {
   const WithBasePage: React.FC<P> = (props) => {
     return (
       <BasePage>

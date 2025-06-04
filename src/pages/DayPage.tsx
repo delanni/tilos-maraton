@@ -1,33 +1,40 @@
-import type { LoaderFunction } from 'react-router-dom';
-import { useLoaderData } from 'react-router-dom';
-import { BasePage } from './BasePage';
-import { getDayById, getPerformancesByDayId, getArtistById, getStageById } from '../services/dataService';
-import type { Day, Performance, Artist, Stage } from '../types';
+import type { LoaderFunction } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
+import { BasePage } from "./BasePage";
+import {
+  getDayById,
+  getPerformancesByDayId,
+  getArtistById,
+  getStageById,
+} from "../services/dataService";
+import type { Day, Performance, Artist, Stage } from "../types";
 
 type DayPageData = Day & {
-  performances: Array<Performance & {
-    artist: Artist | undefined;
-    stage: Stage | undefined;
-  }>;
+  performances: Array<
+    Performance & {
+      artist: Artist | undefined;
+      stage: Stage | undefined;
+    }
+  >;
 };
 
 export const loadDayPageData: LoaderFunction<DayPageData> = ({ params }) => {
   const dayId = params.id;
   if (!dayId) {
-    throw new Response('Day ID is required', { status: 400 });
+    throw new Response("Day ID is required", { status: 400 });
   }
-  
+
   const day = getDayById(dayId);
   if (!day) {
-    throw new Response('Day not found', { status: 404 });
+    throw new Response("Day not found", { status: 404 });
   }
-  
-  const performances = getPerformancesByDayId(dayId).map(performance => ({
+
+  const performances = getPerformancesByDayId(dayId).map((performance) => ({
     ...performance,
     artist: getArtistById(performance.artistId),
-    stage: getStageById(performance.stageId)
+    stage: getStageById(performance.stageId),
   }));
-  
+
   return { ...day, performances };
 };
 
@@ -45,7 +52,10 @@ export const DayPage: React.FC = () => {
           <h2 className="text-3xl font-bold">{dayInfo.name}</h2>
           <p className="text-xl mt-2">{dayInfo.date}</p>
           <p className="mt-4 max-w-3xl">{dayInfo.description}</p>
-          <button type="button" className="mt-4 bg-white text-blue-700 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors">
+          <button
+            type="button"
+            className="mt-4 bg-white text-blue-700 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors"
+          >
             View on Facebook
           </button>
         </div>
@@ -92,7 +102,10 @@ export const DayPage: React.FC = () => {
               <h4 className="font-medium mb-2">Venue</h4>
               <p className="text-gray-700">Dürer Kert, Budapest</p>
               <p className="text-sm text-gray-500">1114 Budapest, Dürer sor 19.</p>
-              <button type="button" className="mt-2 text-blue-600 text-sm font-medium hover:underline">
+              <button
+                type="button"
+                className="mt-2 text-blue-600 text-sm font-medium hover:underline"
+              >
                 View on map →
               </button>
             </div>

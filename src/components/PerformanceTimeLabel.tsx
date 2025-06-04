@@ -10,7 +10,7 @@ export default function PerformanceTimeLabel({
 }) {
   const getPerformanceStatus = (
     startTime: string,
-    endTime: string
+    endTime: string,
   ): { status: "running" | "ended" | "upcoming"; label: string } => {
     const now = new Date();
     const start = new Date(startTime);
@@ -26,12 +26,9 @@ export default function PerformanceTimeLabel({
   };
 
   const getPerformanceTimeLabel = (
-    performance: Pick<Performance, "startTime" | "endTime">
+    performance: Pick<Performance, "startTime" | "endTime">,
   ): React.ReactNode => {
-    const { status, label } = getPerformanceStatus(
-      performance.startTime,
-      performance.endTime
-    );
+    const { status, label } = getPerformanceStatus(performance.startTime, performance.endTime);
     if (status === "running") {
       return (
         <span
@@ -53,8 +50,7 @@ export default function PerformanceTimeLabel({
     if (full) {
       return (
         <span className="mt-2 px-2 py-1 text-sm font-medium text-gray-500 bg-gray-100 rounded-full">
-          {formatTime2Digit(performance.startTime)} -{" "}
-          {formatTime2Digit(performance.endTime)}
+          {formatTime2Digit(performance.startTime)} - {formatTime2Digit(performance.endTime)}
         </span>
       );
     }

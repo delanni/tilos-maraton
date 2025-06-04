@@ -1,41 +1,47 @@
-import type React from 'react';
-import { useLoaderData, type LoaderFunction } from 'react-router-dom';
-import { BasePage } from './BasePage';
-import { getArtistById, getDayById, getPerformancesByArtistId, getStageById } from '../services/dataService';
-import type { Artist, Performance, Day, Stage } from '../types';
-import PerformanceTimeLabel from '../components/PerformanceTimeLabel';
+import type React from "react";
+import { useLoaderData, type LoaderFunction } from "react-router-dom";
+import { BasePage } from "./BasePage";
+import {
+  getArtistById,
+  getDayById,
+  getPerformancesByArtistId,
+  getStageById,
+} from "../services/dataService";
+import type { Artist, Performance, Day, Stage } from "../types";
+import PerformanceTimeLabel from "../components/PerformanceTimeLabel";
 
-type ArtistPageData = Artist & { performances: Array<Performance & { day: Day | undefined; stage: Stage | undefined }>};
+type ArtistPageData = Artist & {
+  performances: Array<Performance & { day: Day | undefined; stage: Stage | undefined }>;
+};
 
 export const getEnrichedArtist = (id: string): ArtistPageData | undefined => {
   const artist = getArtistById(id);
   if (!artist) return undefined;
-  
-  const artistPerformances = getPerformancesByArtistId(id)
-    .map(performance => ({
-      ...performance,
-      day: getDayById(performance.dayId),
-      stage: getStageById(performance.stageId)
-    }));
-  
+
+  const artistPerformances = getPerformancesByArtistId(id).map((performance) => ({
+    ...performance,
+    day: getDayById(performance.dayId),
+    stage: getStageById(performance.stageId),
+  }));
+
   return { ...artist, performances: artistPerformances };
 };
 
 export const loadArtistPageData: LoaderFunction<ArtistPageData> = ({ params }) => {
   const artistId = params.id;
   if (!artistId) {
-    throw new Response('Artist ID is required', { status: 400 });
+    throw new Response("Artist ID is required", { status: 400 });
   }
   const artist = getEnrichedArtist(artistId);
   if (!artist) {
-    throw new Response('Artist not found', { status: 404 });
+    throw new Response("Artist not found", { status: 404 });
   }
   return artist;
 };
 
 export const ArtistPage: React.FC = () => {
   const artist = useLoaderData() as ArtistPageData;
-  
+
   return (
     <BasePage>
       <div className="space-y-6">
@@ -51,14 +57,16 @@ export const ArtistPage: React.FC = () => {
           <div className="md:w-2/3 space-y-4">
             <div>
               <h2 className="text-2xl font-bold">{artist.name}</h2>
-              <p className="text-gray-600">{artist.genre} • {artist.collective}</p>
+              <p className="text-gray-600">
+                {artist.genre} • {artist.collective}
+              </p>
             </div>
             <div className="prose max-w-none">
               <p>{artist.description}</p>
             </div>
           </div>
         </div>
-        
+
         <div className="mt-8">
           <h3 className="text-xl font-semibold mb-4">{artist.name} előadásai</h3>
           <div className="space-y-2">
@@ -67,7 +75,9 @@ export const ArtistPage: React.FC = () => {
                 <div className="flex justify-between items-center">
                   <div>
                     <p className="font-medium"> {performance.description}</p>
-                    <p className="text-sm text-gray-600">{performance.stage?.name} • {performance.day?.name}</p>
+                    <p className="text-sm text-gray-600">
+                      {performance.stage?.name} • {performance.day?.name}
+                    </p>
                   </div>
                   <div className="text-right">
                     <PerformanceTimeLabel performance={performance} full />
@@ -75,7 +85,7 @@ export const ArtistPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-            ))} 
+            ))}
           </div>
         </div>
       </div>

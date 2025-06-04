@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import type { Day } from "../types";
 import {
   getArtistById,
@@ -9,7 +9,8 @@ import {
   getAllDays,
   getAllStages,
 } from "../services/dataService";
-import PerformanceTimeLabel from "../components/PerformanceTimeLabel";
+import { getFavorites } from "../services/favoritesService";
+import { PerformanceCard } from "../components/PerformanceCard";
 import type { Performance } from "../types";
 
 // Define the expected shape of the performance data
@@ -51,8 +52,13 @@ export const loadTimetableData = (): TimetableLoaderData => {
 export const TimetablePage: React.FC = () => {
   const { performances, days } = useLoaderData() as TimetableLoaderData;
   const [activeDayId, setActiveDayId] = useState<string>(localStorage.getItem("activeDayId") || "");
-  const [activeStageId, setActiveStageId] = useState<string>(localStorage.getItem("activeStageId") || "");
-  const stages = getAllStages().filter((stage) => !stage.hidden && stage.id !== 'merch');
+  const [activeStageId, setActiveStageId] = useState<string>(
+    localStorage.getItem("activeStageId") || "",
+  );
+  const [showFavorites, setShowFavorites] = useState<boolean>(false);
+  const stages = getAllStages().filter((stage) => !stage.hidden && stage.id !== "merch");
+
+  const favorites = getFavorites();
 
   useEffect(() => {
     // Set the initial active day to the closes to current date
@@ -76,7 +82,16 @@ export const TimetablePage: React.FC = () => {
 
   const handleStageChange = (stageId: string) => {
     setActiveStageId(stageId);
+    setShowFavorites(false);
     localStorage.setItem("activeStageId", stageId);
+  };
+
+  const handleFavoritesToggle = () => {
+    const newShowFavorites = !showFavorites;
+    setShowFavorites(newShowFavorites);
+    if (newShowFavorites) {
+      setActiveStageId("");
+    }
   };
 
   // Filter and sort performances for the active day and selected stage
@@ -84,26 +99,15 @@ export const TimetablePage: React.FC = () => {
     .filter((performance) => {
       const matchesDay = performance.dayId === activeDayId;
       const matchesStage = !activeStageId || performance.stageId === activeStageId;
-      return (
-        matchesDay &&
-        matchesStage &&
-        performance.startTime &&
-        performance.endTime
-      );
-    })
-    .sort((a, b) =>
-      new Date(a.startTime).getTime() - new Date(b.startTime).getTime()
-    );
+      const isFavorite = favorites.includes(performance.id);
 
-  // Get display name for artist
-  const getArtistDisplayName = (
-    artist: { name: string; collective?: string | null } | undefined | null
-  ) => {
-    if (!artist) return "Ismeretlen előadó";
-    return artist.collective
-      ? `${artist.name} (${artist.collective})`
-      : artist.name;
-  };
+      if (showFavorites) {
+        return matchesDay && isFavorite && performance.startTime && performance.endTime;
+      }
+
+      return matchesDay && matchesStage && performance.startTime && performance.endTime;
+    })
+    .sort((a, b) => new Date(a.startTime).getTime() - new Date(b.startTime).getTime());
 
   if (days.length === 0) {
     return (
@@ -121,111 +125,97 @@ export const TimetablePage: React.FC = () => {
           <button
             type="button"
             key={day.id}
-            className={`px-4 py-2 rounded-lg transition-colors ${
+            className={`px-3 py-1.5 rounded-lg transition-colors text-xs font-medium ${
               day.id === activeDayId
                 ? "bg-blue-600 text-white"
                 : "bg-gray-100 hover:bg-gray-200 text-gray-800"
             }`}
             onClick={() => handleDayChange(day.id)}
           >
-            {day.name}
+            <div>{day.name}</div>
+            <div>
+              {new Date(day.date).toLocaleDateString("hu-HU", {
+                month: "short",
+                day: "numeric",
+              })}
+            </div>
           </button>
         ))}
       </div>
       {/* Stage selector */}
       <div className="flex overflow-x-auto pb-4 mb-6 gap-2">
-        <button
-          type="button"
-          key="all-stages"
-          className={`px-4 py-2 rounded-lg transition-colors ${
-            !activeStageId
-              ? "bg-green-600 text-white"
-              : "bg-gray-100 hover:bg-gray-200 text-gray-800"
-          }`}
+        <ButtonWithIcon
+          icon="💠"
+          label="Összes"
           onClick={() => handleStageChange("")}
-        >
-          Összes helyszín
-        </button>
+          active={!activeStageId && !showFavorites}
+          activeColor="#4fde66"
+        />
+        <ButtonWithIcon
+          icon="❤️"
+          label="Kedvencek"
+          onClick={handleFavoritesToggle}
+          active={showFavorites}
+          activeColor="#f55555"
+        />
         {stages.map((stage) => (
-          <button
-            type="button"
+          <ButtonWithIcon
             key={stage.id}
-            className={`px-4 py-2 rounded-lg transition-colors flex items-center gap-2 ${
-              stage.id === activeStageId
-                ? "bg-green-600 text-white"
-                : "bg-gray-100 hover:bg-gray-200 text-gray-800"
-            }`}
+            icon={stage.icon}
+            label={stage.name}
             onClick={() => handleStageChange(stage.id)}
-          >
-            {stage.icon && <span>{stage.icon}</span>}
-            {stage.name}
-          </button>
+            active={activeStageId === stage.id}
+          />
         ))}
       </div>
 
       {sortedPerformances.length === 0 ? (
         <div className="text-center py-8">
-          <p className="text-gray-600">Nincs előadás ezen a napon.</p>
+          <p className="text-gray-600">
+            {showFavorites
+              ? "Nincsenek mentett előadások ezen a napon."
+              : "Nincs előadás ezen a napon."}
+          </p>
         </div>
       ) : (
-        <div
-          className="space-y-4 overflow-y-scroll"
-          style={{ height: "600px" }}
-        >
+        <div className="space-y-4 overflow-y-auto" style={{ height: "600px" }}>
           {sortedPerformances.map((performance) => (
-            <div
-              key={performance.id}
-              className="p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-              style={{
-                backgroundColor: performance.day?.themeColors?.background,
-                color: performance.day?.themeColors?.text,
-              }}
-            >
-              <Link to={`/performance/${performance.id}`}>
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
-                  <div>
-                    <h3 className="font-bold text-lg" style={{ color: performance.day?.themeColors?.primary }}>
-                      {getArtistDisplayName(performance.artist)}
-                    </h3>
-                    <p className="text-gray-600">
-                      {performance.stage?.name || "Ismeretlen színpad"}
-                    </p>
-                  </div>
-                  {performance.startTime && performance.endTime && (
-                    <PerformanceTimeLabel
-                      performance={performance}
-                      full={true}
-                    />
-                  )}
-                </div>
-
-                {performance.description && (
-                  <p className="mt-2 text-gray-700">
-                    {performance.artist?.description}
-                  </p>
-                )}
-
-                {(performance.artist?.genre || performance.description) && (
-                  <div className="mt-2 space-y-1">
-                    {performance.artist?.genre && (
-                      <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">
-                        {performance.artist.genre}
-                      </span>
-                    )}
-                    {performance.description && (
-                      <p className="text-sm text-gray-700 mt-1">
-                        {performance.description}
-                      </p>
-                    )}
-                  </div>
-                )}
-              </Link>
-            </div>
+            <PerformanceCard key={performance.id} performance={performance} />
           ))}
         </div>
       )}
     </div>
   );
 };
+
+function ButtonWithIcon({
+  icon,
+  label,
+  onClick,
+  active,
+  activeColor = "#3587eb",
+}: {
+  icon: string;
+  label: string;
+  onClick: () => void;
+  active: boolean;
+  activeColor?: string;
+}) {
+  return (
+    <button
+      type="button"
+      className={`px-3 py-1.5 rounded-lg transition-colors text-xs font-medium flex flex-col items-center gap-1 ${
+        active ? `text-white` : "bg-gray-100 hover:bg-gray-200 text-gray-800"
+      }`}
+      style={{
+        backgroundColor: active ? activeColor : "#e5e7eb",
+      }}
+      onClick={() => onClick()}
+    >
+      {icon && <span className="block text-lg">{icon}</span>}
+      <span className="block">{label}</span>
+    </button>
+  );
+}
 
 export default TimetablePage;

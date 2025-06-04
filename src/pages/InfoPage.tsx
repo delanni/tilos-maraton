@@ -3,12 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 import { BasePage } from "./BasePage";
 import { getAllStages, getEventMeta } from "../services/dataService";
-import {
-  FacebookIcon,
-  YoutubeIcon,
-  InstagramIcon,
-  SocialLink,
-} from "../components/icons";
+import { FacebookIcon, YoutubeIcon, InstagramIcon, SocialLink } from "../components/icons";
 import type { FestivalInfo, Stage } from "../types";
 
 export const loadFestivalInfo = () => {
@@ -120,19 +115,14 @@ function InfoPageStagesSection({ stages }: { stages: Stage[] }) {
       {stages
         .filter((e) => !e.hidden)
         .map((stage) => (
-          <div
-            key={stage.id}
-            className="border rounded-lg p-4 mb-4 bg-white shadow-sm"
-          >
+          <div key={stage.id} className="border rounded-lg p-4 mb-4 bg-white shadow-sm">
             <Link to={`/stage/${stage.id}`} className="block">
               <div className="flex flex-col items-start gap-2">
                 <div className="flex items-center">
                   <span className="text-2xl mr-2">{stage.icon}</span>
                   <h3 className="font-medium text-lg">{stage.name}</h3>
                 </div>
-                <p className="mt-2 md:mt-0 text-gray-600 flex-1">
-                  {stage.description}
-                </p>
+                <p className="mt-2 md:mt-0 text-gray-600 flex-1">{stage.description}</p>
               </div>
             </Link>
           </div>
@@ -148,10 +138,7 @@ function InfoPageContactSection({ eventInfo }: { eventInfo: FestivalInfo }) {
       <div className="space-y-2">
         <p>
           Email:{" "}
-          <a
-            href={`mailto:${eventInfo.contact}`}
-            className="text-blue-600 hover:underline"
-          >
+          <a href={`mailto:${eventInfo.contact}`} className="text-blue-600 hover:underline">
             {eventInfo.contact}
           </a>
         </p>
@@ -169,11 +156,7 @@ function InfoPageContactSection({ eventInfo }: { eventInfo: FestivalInfo }) {
               icon={<InstagramIcon />}
               label="Instagram"
             />
-            <SocialLink
-              href={eventInfo.links.youtube.url}
-              icon={<YoutubeIcon />}
-              label="YouTube"
-            />
+            <SocialLink href={eventInfo.links.youtube.url} icon={<YoutubeIcon />} label="YouTube" />
           </div>
         </div>
       </div>

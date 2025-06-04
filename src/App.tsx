@@ -17,9 +17,7 @@ const App: React.FC = () => {
                 to="/"
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-md text-sm text-center font-medium ${
-                    isActive
-                      ? "bg-blue-100 text-blue-700"
-                      : "text-gray-700 hover:bg-gray-100"
+                    isActive ? "bg-blue-100 text-blue-700" : "text-gray-700 hover:bg-gray-100"
                   }`
                 }
               >
@@ -29,9 +27,7 @@ const App: React.FC = () => {
                 to="/info"
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-md text-sm text-center font-medium ${
-                    isActive
-                      ? "bg-blue-100 text-blue-700"
-                      : "text-gray-700 hover:bg-gray-100"
+                    isActive ? "bg-blue-100 text-blue-700" : "text-gray-700 hover:bg-gray-100"
                   }`
                 }
               >
@@ -41,9 +37,7 @@ const App: React.FC = () => {
                 to="/search"
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-md text-sm text-center font-medium ${
-                    isActive
-                      ? "bg-blue-100 text-blue-700"
-                      : "text-gray-700 hover:bg-gray-100"
+                    isActive ? "bg-blue-100 text-blue-700" : "text-gray-700 hover:bg-gray-100"
                   }`
                 }
               >
@@ -59,9 +53,7 @@ const App: React.FC = () => {
       <footer className="bg-white border-t border-gray-200 mt-8">
         <div className="container mx-auto px-4 py-6">
           <div className="text-center text-sm text-gray-500">
-            <p>
-              © {new Date().getFullYear()} Tilos Rádió. Minden jog fenntartva.
-            </p>
+            <p>© {new Date().getFullYear()} Tilos Rádió. Minden jog fenntartva.</p>
           </div>
         </div>
       </footer>

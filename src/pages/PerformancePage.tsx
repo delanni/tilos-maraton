@@ -9,6 +9,8 @@ import {
 } from "../services/dataService";
 import type { Performance, Artist, Day, Stage } from "../types";
 import { formatDate, formatTime2Digit, printDuration } from "../lib/formatTime";
+import { isFavorite, toggleFavorite } from "../services/favoritesService";
+import { useEffect, useState } from "react";
 
 type PerformanceWithDetails = Performance & {
   artist: Artist | undefined;
@@ -16,9 +18,7 @@ type PerformanceWithDetails = Performance & {
   stage: Stage | undefined;
 };
 
-export const loadPerformancePageData: LoaderFunction<
-  PerformanceWithDetails
-> = ({ params }) => {
+export const loadPerformancePageData: LoaderFunction<PerformanceWithDetails> = ({ params }) => {
   const performanceId = params.id;
   if (!performanceId) {
     throw new Response("Performance ID is required", { status: 400 });
@@ -39,14 +39,23 @@ export const loadPerformancePageData: LoaderFunction<
 
 export const PerformancePage: React.FC = () => {
   const performance = useLoaderData() as PerformanceWithDetails;
+  const [isPerformanceFavorite, setIsPerformanceFavorite] = useState(false);
+
+  useEffect(() => {
+    setIsPerformanceFavorite(isFavorite(performance.id));
+  }, [performance.id]);
+
+  const handleFavoriteClick = () => {
+    toggleFavorite(performance.id);
+    setIsPerformanceFavorite(!isPerformanceFavorite);
+  };
 
   if (!performance.artist || !performance.day || !performance.stage) {
     return (
       <BasePage>
         <div className="text-center py-12">
           <h2 className="text-2xl font-bold text-gray-800">
-            Az előadás nem található - valami hiba történt <br />{" "}
-            {performance.id}
+            Az előadás nem található - valami hiba történt <br /> {performance.id}
           </h2>
         </div>
       </BasePage>
@@ -59,16 +68,14 @@ export const PerformancePage: React.FC = () => {
         <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg p-6 text-white">
           <h2 className="text-3xl font-bold">
             {performance.artist.name}
-            {performance.artist.collective &&
-              ` (${performance.artist.collective})`}
+            {performance.artist.collective && ` (${performance.artist.collective})`}
           </h2>
           <div className="flex flex-wrap gap-4 mt-2">
             <span className="bg-white/20 px-3 py-1 rounded-full text-sm">
               {performance.day.name}
             </span>
             <span className="bg-white/20 px-3 py-1 rounded-full text-sm">
-              {formatTime2Digit(performance.startTime)} -{" "}
-              {formatTime2Digit(performance.endTime)}
+              {formatTime2Digit(performance.startTime)} - {formatTime2Digit(performance.endTime)}
             </span>
             <span className="bg-white/20 px-3 py-1 rounded-full text-sm">
               {performance.stage.name}
@@ -88,6 +95,32 @@ export const PerformancePage: React.FC = () => {
           </div>
 
           <div className="space-y-6">
+            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+              <button
+                onClick={handleFavoriteClick}
+                className={`w-full py-2 px-4 rounded-md flex items-center justify-center gap-2 transition-colors ${
+                  isPerformanceFavorite
+                    ? "bg-red-500 text-white"
+                    : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                }`}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`h-5 w-5 ${isPerformanceFavorite ? "text-white" : "text-current"}`}
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <span>
+                  {isPerformanceFavorite ? "Eltávolítás a kedvencekből" : "Mentés a kedvencekbe"}
+                </span>
+              </button>
+            </div>
             <Link to={`/artist/${performance.artistId}`}>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="font-semibold mb-2">Előadó</h3>
@@ -115,16 +148,13 @@ export const PerformancePage: React.FC = () => {
                     {performance.artist.genre && (
                       <p className="text-sm text-gray-600">
                         {performance.artist.genre}
-                        {performance.artist.collective &&
-                          ` • ${performance.artist.collective}`}
+                        {performance.artist.collective && ` • ${performance.artist.collective}`}
                       </p>
                     )}
                   </div>
                 </div>
                 {performance.artist.description && (
-                  <p className="mt-3 text-sm text-gray-600">
-                    {performance.artist.description}
-                  </p>
+                  <p className="mt-3 text-sm text-gray-600">{performance.artist.description}</p>
                 )}
               </div>
             </Link>
@@ -134,9 +164,7 @@ export const PerformancePage: React.FC = () => {
                 <Link to={`/stage/${performance.stageId}`}>
                   <h4 className="font-medium">{performance.stage.name}</h4>
                   {performance.stage.description && (
-                    <p className="text-gray-600 mt-1">
-                      {performance.stage.description}
-                    </p>
+                    <p className="text-gray-600 mt-1">{performance.stage.description}</p>
                   )}
                 </Link>
               </div>
@@ -158,9 +186,7 @@ export const PerformancePage: React.FC = () => {
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-gray-500">Időtartam</dt>
-                  <dd>
-                    {printDuration(performance.startTime, performance.endTime)}
-                  </dd>
+                  <dd>{printDuration(performance.startTime, performance.endTime)}</dd>
                 </div>
               </dl>
             </div>
