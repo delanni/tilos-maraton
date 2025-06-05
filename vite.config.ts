@@ -15,13 +15,13 @@ export default defineConfig({
       manifest: {
         name: "Tilos Maraton 2025",
         short_name: "Tilos Maraton",
-        start_url: "/",
+        start_url: "/tilos-maraton",
         display: "standalone",
-        background_color: "#ffffff",
-        theme_color: "#1976d2",
+        background_color: "#202020",
+        theme_color: "#FE4E00",
         icons: [
           {
-            src: "/favicon.svg",
+            src: "/resources/logo.svg",
             sizes: "any",
             type: "image/svg+xml",
           },

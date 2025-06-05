@@ -64,7 +64,7 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({ performance })
       <Link to={`/performance/${performance.id}`} className="block group">
         <div className="grid grid-cols-[1fr,auto] gap-2">
           {/* Top row: Artist name and favorite button */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 overflow-hidden">
             <h3
               className="font-bold text-lg leading-tight truncate group-hover:underline"
               style={{ color: performance.day?.themeColors?.primary }}
@@ -73,6 +73,7 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({ performance })
             </h3>
           </div>
           <button
+            type="button"
             onClick={(e) => {
               e.preventDefault();
               handleFavoriteClick(e);
@@ -115,7 +116,7 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({ performance })
               <span
                 className="inline-block text-xs px-2 py-0.5 rounded-full opacity-90"
                 style={{
-                  backgroundColor: performance.day?.themeColors?.primary + "20",
+                  backgroundColor: `${performance.day?.themeColors?.primary}20`,
                   color: performance.day?.themeColors?.primary,
                 }}
               >
