@@ -605,7 +605,8 @@
     "collective": null,
     "description": "A 7Térítő műsorkészítői. - https://tilos.hu/show/7terito",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/7terito.jpg"
   },
   {
     "id": "csetesek",
@@ -629,7 +630,8 @@
     "collective": null,
     "description": "Az Icecream műsorkészítői. - https://tilos.hu/show/icecream",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/icecream.jpg"
   },
   {
     "id": "mauvaises-ondes",
@@ -637,7 +639,8 @@
     "collective": null,
     "description": "A Mauvaises Ondes műsorkészítői. - https://tilos.hu/show/mauvaises_ondes",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/mauvaises_ondes.jpg"
   },
   {
     "id": "start-galeria",
@@ -669,7 +672,8 @@
     "collective": null,
     "description": "A Zarándokok, a Majom a vízben és az Amiről nem lehet beszélni műsorkészítői. - https://tilos.hu/show/zarandokok, https://tilos.hu/show/majom-a-vizben, https://tilos.hu/show/amirol-nem-lehet-beszelni",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/zarandokok.jpg"
   },
   {
     "id": "budapest-eklektik-nepzene",
@@ -677,7 +681,8 @@
     "collective": null,
     "description": "A Budapest Eklektik és Népzene műsorkészítői. - https://tilos.hu/show/eklektik, https://tilos.hu/show/nepzene",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/eklektik.jpg"
   },
   {
     "id": "majom-a-vizben-torzshallgatok",
@@ -685,7 +690,8 @@
     "collective": null,
     "description": "A Majom a vízben műsorkészítői kiegészítve törzshallgatókkal. - https://tilos.hu/show/majom-a-vizben",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/majom.jpg"
   },
   {
     "id": "menedek-egyesulet",
@@ -701,7 +707,8 @@
     "collective": null,
     "description": "A Direkt36/Forgoszinpad műsorkészítői és szerkesztői. - https://tilos.hu/show/forgoszinpad, https://www.direkt36.hu/",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/forgoszinpad.jpg"
   },
   {
     "id": "totumfaktum",
@@ -709,7 +716,8 @@
     "collective": null,
     "description": "A Tótumfaktum műsorkészítői. - https://tilos.hu/show/totumfaktum",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/totumfaktum.jpg"
   },
   {
     "id": "helyettes-reggeli",
@@ -717,7 +725,8 @@
     "collective": null,
     "description": "A Helyettes reggeli műsorkészítői. - https://tilos.hu/show/helyettes-reggeli",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/helyettes.jpg"
   },
   {
     "id": "szamarpad",
@@ -725,7 +734,8 @@
     "collective": null,
     "description": "A Szamárpad műsorkészítői. - https://tilos.hu/show/szamarpad",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/szamarpad.jpg"
   },
   {
     "id": "futo-kaland",
@@ -733,7 +743,8 @@
     "collective": null,
     "description": "A Futó Kaland műsorkészítői. - https://tilos.hu/show/futo-kaland",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/futo.jpg"
   },
   {
     "id": "es-ti-mibkben-vagytok",
@@ -741,7 +752,8 @@
     "collective": null,
     "description": "Az És ti mibkben vagytok? műsorkészítői. - https://tilos.hu/show/hasz",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/hasz.jpg"
   },
   {
     "id": "szerkesztoseg",
@@ -757,7 +769,8 @@
     "collective": null,
     "description": "A Bandita Rádió műsorkészítői. - https://tilos.hu/show/banditaradio",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/banditaradio.jpg"
   },
   {
     "id": "bandita-radio-paholy",
@@ -765,7 +778,8 @@
     "collective": null,
     "description": "A BanditaRádió és Páholy műsorkészítői. - https://tilos.hu/show/banditaradio, https://tilos.hu/show/paholy",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/banditaradio.jpg"
   },
   {
     "id": "banditaradio-kitchenallstars",
@@ -773,7 +787,8 @@
     "collective": null,
     "description": "A BanditaRádió műsorkészítői. - https://tilos.hu/show/banditaradio",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/banditaradio.jpg"
   },
   {
     "id": "budapest-bike-maffia",
@@ -789,7 +804,8 @@
     "collective": null,
     "description": "Az Utcarádió műsorkészítői. - https://tilos.hu/show/utcaradio",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/utcaradio.jpg"
   },
   {
     "id": "szex-akcio-hircsoport",
@@ -797,7 +813,8 @@
     "collective": null,
     "description": "A Szex-Akció Hírcsoport műsorkészítői. - https://tilos.hu/show/szex-akcio-hircsoport",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/szex.jpg"
   },
   {
     "id": "budapest-eklektik",
@@ -805,7 +822,8 @@
     "collective": null,
     "description": "A Budapest Eklektik műsorkészítői. - https://tilos.hu/show/eklektik",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/eklektik.jpg"
   },
   {
     "id": "tuznyul",
@@ -1477,7 +1495,8 @@
     "collective": null,
     "description": "A Csonkamagyarország műsorkészítői. - https://tilos.hu/show/csonkamagyarorszag",
     "link": null,
-    "genre": null
+    "genre": null,
+    "image": "https://tilos.hu/upload/episode-new/csonkamagyarorszag.jpg"
   },
   {
     "id": "lechtturm",

@@ -4,6 +4,7 @@ export interface Artist {
   collective: string | null;
   description: string;
   genre: string | null;
+  image: string | null;
 }
 
 export interface Day {

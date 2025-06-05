@@ -46,7 +46,7 @@ cp index.html 404.html
 git add .
 
 # Commit
-git commit -m "Deploy to GitHub Pages"
+git commit -m "Deploy to GitHub Pages: $(git log master --pretty=format:%s | head -1)"
 
 # Push
 echo "Run this command if everything is OK:"
