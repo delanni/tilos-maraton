@@ -603,7 +603,7 @@
     "id": "7terito",
     "name": "7Térítő",
     "collective": null,
-    "description": "",
+    "description": "A 7Térítő műsorkészítői. - https://tilos.hu/show/7terito",
     "link": null,
     "genre": null
   },
@@ -611,7 +611,7 @@
     "id": "csetesek",
     "name": "Csetesek",
     "collective": null,
-    "description": "",
+    "description": "A Tilos chat fenegyerekei.",
     "link": null,
     "genre": null
   },
@@ -625,9 +625,9 @@
   },
   {
     "id": "icecream-open-mic",
-    "name": "Icecream Open Mic",
+    "name": "Icecream",
     "collective": null,
-    "description": "",
+    "description": "Az Icecream műsorkészítői. - https://tilos.hu/show/icecream",
     "link": null,
     "genre": null
   },
@@ -635,7 +635,7 @@
     "id": "mauvaises-ondes",
     "name": "Mauvaises Ondes",
     "collective": null,
-    "description": "",
+    "description": "A Mauvaises Ondes műsorkészítői. - https://tilos.hu/show/mauvaises_ondes",
     "link": null,
     "genre": null
   },
@@ -659,7 +659,7 @@
     "id": "heti-betevo",
     "name": "Heti betevő",
     "collective": null,
-    "description": "",
+    "description": "A Heti betevő egyesület. - https://www.hetibetevo.hu/",
     "link": null,
     "genre": null
   },
@@ -667,7 +667,7 @@
     "id": "zarandokok-majom-a-vizben-amiirol-nem-lehet-beszelni",
     "name": "Zarándokok & Majom a vízben & Amiről nem lehet beszélni",
     "collective": null,
-    "description": "",
+    "description": "A Zarándokok, a Majom a vízben és az Amiről nem lehet beszélni műsorkészítői. - https://tilos.hu/show/zarandokok, https://tilos.hu/show/majom-a-vizben, https://tilos.hu/show/amirol-nem-lehet-beszelni",
     "link": null,
     "genre": null
   },
@@ -675,7 +675,7 @@
     "id": "budapest-eklektik-nepzene",
     "name": "Budapest Eklektik + Népzene",
     "collective": null,
-    "description": "",
+    "description": "A Budapest Eklektik és Népzene műsorkészítői. - https://tilos.hu/show/eklektik, https://tilos.hu/show/nepzene",
     "link": null,
     "genre": null
   },
@@ -683,7 +683,7 @@
     "id": "majom-a-vizben-torzshallgatok",
     "name": "Majom a vízben + Törzshallgatók",
     "collective": null,
-    "description": "",
+    "description": "A Majom a vízben műsorkészítői kiegészítve törzshallgatókkal. - https://tilos.hu/show/majom-a-vizben",
     "link": null,
     "genre": null
   },
@@ -691,7 +691,7 @@
     "id": "menedek-egyesulet",
     "name": "Menedék Egyesület",
     "collective": null,
-    "description": "",
+    "description": "A Menedék Egyesület tagjai. - https://menedek.hu/",
     "link": null,
     "genre": null
   },
@@ -699,7 +699,7 @@
     "id": "direkt36",
     "name": "Direkt36",
     "collective": null,
-    "description": "",
+    "description": "A Direkt36/Forgoszinpad műsorkészítői és szerkesztői. - https://tilos.hu/show/forgoszinpad, https://www.direkt36.hu/",
     "link": null,
     "genre": null
   },
@@ -707,7 +707,7 @@
     "id": "totumfaktum",
     "name": "Tótumfaktum",
     "collective": null,
-    "description": "",
+    "description": "A Tótumfaktum műsorkészítői. - https://tilos.hu/show/totumfaktum",
     "link": null,
     "genre": null
   },
@@ -715,7 +715,7 @@
     "id": "helyettes-reggeli",
     "name": "Helyettes reggeli",
     "collective": null,
-    "description": "",
+    "description": "A Helyettes reggeli műsorkészítői. - https://tilos.hu/show/helyettes-reggeli",
     "link": null,
     "genre": null
   },
@@ -723,7 +723,15 @@
     "id": "szamarpad",
     "name": "Szamárpad",
     "collective": null,
-    "description": "",
+    "description": "A Szamárpad műsorkészítői. - https://tilos.hu/show/szamarpad",
+    "link": null,
+    "genre": null
+  },
+  {
+    "id": "futo-kaland",
+    "name": "Futó Kaland",
+    "collective": null,
+    "description": "A Futó Kaland műsorkészítői. - https://tilos.hu/show/futo-kaland",
     "link": null,
     "genre": null
   },
@@ -731,7 +739,7 @@
     "id": "es-ti-mibkben-vagytok",
     "name": "És ti mibkben vagytok?",
     "collective": null,
-    "description": "",
+    "description": "Az És ti mibkben vagytok? műsorkészítői. - https://tilos.hu/show/hasz",
     "link": null,
     "genre": null
   },
@@ -739,31 +747,31 @@
     "id": "szerkesztoseg",
     "name": "Szerkesztőség",
     "collective": null,
-    "description": "",
+    "description": "A Tilos Szerkesztőség tagjai.",
     "link": null,
     "genre": null
   },
   {
     "id": "bandita-radio",
-    "name": "Bandita Rádió",
+    "name": "BanditaRádió",
     "collective": null,
-    "description": "",
+    "description": "A Bandita Rádió műsorkészítői. - https://tilos.hu/show/banditaradio",
     "link": null,
     "genre": null
   },
   {
     "id": "bandita-radio-paholy",
-    "name": "Bandita Rádió + Páholy",
+    "name": "BanditaRádió + Páholy",
     "collective": null,
-    "description": "",
+    "description": "A BanditaRádió és Páholy műsorkészítői. - https://tilos.hu/show/banditaradio, https://tilos.hu/show/paholy",
     "link": null,
     "genre": null
   },
   {
     "id": "banditaradio-kitchenallstars",
-    "name": "Bandita Rádió KitchenAllStars",
+    "name": "BanditaRádió KitchenAllStars",
     "collective": null,
-    "description": "",
+    "description": "A BanditaRádió műsorkészítői. - https://tilos.hu/show/banditaradio",
     "link": null,
     "genre": null
   },
@@ -771,7 +779,7 @@
     "id": "budapest-bike-maffia",
     "name": "Budapest Bike Maffia",
     "collective": null,
-    "description": "",
+    "description": "A Budapest Bike Maffia önkéntesei. - https://bikemaffia.com/",
     "link": null,
     "genre": null
   },
@@ -779,7 +787,7 @@
     "id": "utcaradio",
     "name": "Utcarádió",
     "collective": null,
-    "description": "",
+    "description": "Az Utcarádió műsorkészítői. - https://tilos.hu/show/utcaradio",
     "link": null,
     "genre": null
   },
@@ -787,7 +795,7 @@
     "id": "szex-akcio-hircsoport",
     "name": "Szex-Akció Hírcsoport",
     "collective": null,
-    "description": "",
+    "description": "A Szex-Akció Hírcsoport műsorkészítői. - https://tilos.hu/show/szex-akcio-hircsoport",
     "link": null,
     "genre": null
   },
@@ -795,7 +803,7 @@
     "id": "budapest-eklektik",
     "name": "Budapest Eklektik",
     "collective": null,
-    "description": "",
+    "description": "A Budapest Eklektik műsorkészítői. - https://tilos.hu/show/eklektik",
     "link": null,
     "genre": null
   },
@@ -1467,7 +1475,7 @@
     "id": "csonkamagyarorszag",
     "name": "Csonkamagyarország",
     "collective": null,
-    "description": "",
+    "description": "A Csonkamagyarország műsorkészítői. - https://tilos.hu/show/csonkamagyarorszag",
     "link": null,
     "genre": null
   },
@@ -1475,7 +1483,7 @@
     "id": "lechtturm",
     "name": "Lechtturm",
     "collective": null,
-    "description": "",
+    "description": "A Lechtturm műsorkészítői.",
     "link": null,
     "genre": null
   },
