@@ -22,15 +22,10 @@ const performances = JSON.parse(fs.readFileSync(performancesJsonPath, "utf8"));
     if (!performance) {
       continue;
     }
-    if (
-      performance.stageId === "bogracs" ||
-      performance.stageId === "tilos-caravan-studio"
-    ) {
+    if (performance.stageId === "bogracs" || performance.stageId === "tilos-caravan-studio") {
       const response = await fetch(`https://tilos.hu/show/${artist.id}`);
 
-      const article = artist.name[0].toLowerCase().match(/[aeiouáéíóúőűüö]/)
-        ? "Az"
-        : "A";
+      const article = artist.name[0].toLowerCase().match(/[aeiouáéíóúőűüö]/) ? "Az" : "A";
       if (artist.name.includes(" & ") || artist.name.includes(" + ")) {
         const artistNames = artist.name.split(/ [&+] /).join(" és ");
         artist.description = `${article} ${artistNames} műsorkészítői.`;
@@ -42,9 +37,7 @@ const performances = JSON.parse(fs.readFileSync(performancesJsonPath, "utf8"));
         artist.description += ` - https://tilos.hu/show/${artist.id}`;
       }
 
-      console.log(
-        `Updated description for ${artist.name}: ${artist.description}`
-      );
+      console.log(`Updated description for ${artist.name}: ${artist.description}`);
     }
   }
 

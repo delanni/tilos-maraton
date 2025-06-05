@@ -58,6 +58,6 @@ export const router = createBrowserRouter(
     },
   ],
   {
-    //* basename: "/tilos-maraton", // will be uncommented pre-gh-builds
+    basename: process.env.BASE_NAME || "/",
   },
 );

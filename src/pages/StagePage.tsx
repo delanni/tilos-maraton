@@ -102,7 +102,7 @@ export const StagePage: React.FC = () => {
                       <h3 className="text-xl font-semibold mb-3">Közelgő események</h3>
                       <div className="space-y-4">
                         {upcomingPerformances.slice(0, 5).map((performance) => (
-                          <UpcomingPerformanceCard performance={performance} />
+                          <UpcomingPerformanceCard key={performance.id} performance={performance} />
                         ))}
                       </div>
                     </div>
@@ -116,7 +116,7 @@ export const StagePage: React.FC = () => {
           <div className="space-y-6">
             <div className="p-4 bg-gray-50 rounded-lg">
               <h3 className="font-semibold mb-2">Térkép</h3>
-              <Link to={`/map`}>
+              <Link to="/map">
                 <MapComponent stage={stage} />
               </Link>
             </div>

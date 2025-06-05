@@ -11,6 +11,7 @@ import type { Performance, Artist, Day, Stage } from "../types";
 import { formatDate, formatTime2Digit, printDuration } from "../lib/formatTime";
 import { isFavorite, toggleFavorite } from "../services/favoritesService";
 import { useEffect, useState } from "react";
+import { missingArtistFallbackIcon } from "../components/icons";
 
 type PerformanceWithDetails = Performance & {
   artist: Artist | undefined;
@@ -104,14 +105,18 @@ export const PerformancePage: React.FC = () => {
                     ? "bg-red-500 text-white"
                     : "bg-gray-100 text-gray-800 hover:bg-gray-200"
                 }`}
-                aria-label={isPerformanceFavorite ? "Eltávolítás a kedvencekből" : "Hozzáadás a kedvencekhez"}
+                aria-label={
+                  isPerformanceFavorite ? "Eltávolítás a kedvencekből" : "Hozzáadás a kedvencekhez"
+                }
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={`h-5 w-5 ${isPerformanceFavorite ? "text-white" : "text-current"}`}
                   viewBox="0 0 20 20"
                   fill="currentColor"
+                  aria-label="Heart icon"
                 >
+                  <title>Heart icon</title>
                   <path
                     fillRule="evenodd"
                     d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
@@ -136,7 +141,7 @@ export const PerformancePage: React.FC = () => {
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           target.onerror = null;
-                          target.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2248%22%20height%3D%2248%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23999%22%3E%3Cpath%20d%3D%22M12%2012a5%205%200%20110-10%205%205%200%20010%2010zm0-2a3%203%200%20100-6%203%203%200%20000%206zm0%204c-5.523%200-10%202.686-10%206v2h20v-2c0-3.314-4.477-6-10-6z%22%2F%3E%3C%2Fsvg%3E';
+                          target.src = missingArtistFallbackIcon;
                         }}
                       />
                     ) : (

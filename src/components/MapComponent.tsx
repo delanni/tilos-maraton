@@ -1,11 +1,9 @@
-import { Stage } from "../types";
+import type { Stage } from "../types";
 import { useState, useRef, useEffect } from "react";
+import mapImage from "../../resources/map.png";
 
 interface MapComponentProps {
   stage?: Stage;
-  initialZoom?: number;
-  maxZoom?: number;
-  minZoom?: number;
 }
 
 type Coords = {
@@ -47,7 +45,7 @@ export default function MapComponent({ stage }: MapComponentProps) {
       ref={mapDisplayRef}
       className="relative w-full h-[600px] overflow-hidden"
       style={{
-        backgroundImage: 'url("/resources/map.png")',
+        backgroundImage: `url("${mapImage}")`,
         backgroundPosition: `${backgroundScroll.x}px ${backgroundScroll.y}px`,
       }}
     >
@@ -74,8 +72,8 @@ export default function MapComponent({ stage }: MapComponentProps) {
 function DefaultMapComponent() {
   return (
     <div className="relative w-full">
-      <a href="/resources/map.png" target="_blank">
-        <img src="/resources/map.png" alt="Térkép"></img>
+      <a href={mapImage} target="_blank" rel="noopener noreferrer">
+        <img src={mapImage} alt="Térkép" />
       </a>
     </div>
   );
