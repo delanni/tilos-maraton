@@ -8,7 +8,8 @@ import {
   getStageById,
 } from "../services/dataService";
 import type { Artist, Performance, Day, Stage } from "../types";
-import PerformanceTimeLabel from "../components/PerformanceTimeLabel";
+import { PerformanceCard } from "../components/PerformanceCard";
+import { LinkifiedDescription } from "../components/LinkifiedDescriptions";
 
 type ArtistPageData = Artist & {
   performances: Array<Performance & { day: Day | undefined; stage: Stage | undefined }>;
@@ -57,34 +58,34 @@ export const ArtistPage: React.FC = () => {
           <div className="md:w-2/3 space-y-4">
             <div>
               <h2 className="text-2xl font-bold">{artist.name}</h2>
-              <p className="text-gray-600">
-                {artist.genre} • {artist.collective}
-              </p>
+              {(artist.genre || artist.collective) && (
+                <p className="text-gray-600">
+                  {artist.genre} • {artist.collective}
+                </p>
+              )}
             </div>
             <div className="prose max-w-none">
-              <p>{artist.description}</p>
+              {artist.description && <LinkifiedDescription description={artist.description} />}
             </div>
           </div>
         </div>
 
         <div className="mt-8">
           <h3 className="text-xl font-semibold mb-4">{artist.name} előadásai</h3>
-          <div className="space-y-2">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {artist.performances.map((performance) => (
-              <div key={performance.id} className="p-4 border rounded-lg">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="font-medium"> {performance.description}</p>
-                    <p className="text-sm text-gray-600">
-                      {performance.stage?.name} • {performance.day?.name}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <PerformanceTimeLabel performance={performance} full />
-                    <p className="text-sm text-gray-600">{performance.day?.date}</p>
-                  </div>
-                </div>
-              </div>
+              <PerformanceCard
+                key={performance.id}
+                performance={{
+                  ...performance,
+                  artist: {
+                    name: artist.name,
+                    collective: artist.collective,
+                    description: artist.description,
+                    genre: artist.genre,
+                  },
+                }}
+              />
             ))}
           </div>
         </div>
