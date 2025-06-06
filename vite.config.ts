@@ -22,11 +22,11 @@ export default defineConfig({
         short_name: "Tilos Maraton",
         start_url: baseName,
         display: "standalone",
-        background_color: "#202020",
+        background_color: "#EDE1DF",
         theme_color: "#FE4E00",
         icons: [
           {
-            src: `${baseName}/resources/logo.svg`,
+            src: "https://tilos.hu/tilos_radio_logo.svg",
             sizes: "any",
             type: "image/svg+xml",
           },
