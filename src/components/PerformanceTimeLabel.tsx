@@ -1,4 +1,4 @@
-import { formatTime2Digit } from "../lib/formatTime";
+import { formatDay, formatTime2Digit } from "../lib/formatTime";
 import type { Performance } from "../types";
 
 export default function PerformanceTimeLabel({
@@ -25,6 +25,8 @@ export default function PerformanceTimeLabel({
     return { status: "upcoming", label: "" };
   };
 
+  const startDate = formatDay(performance.startTime);
+
   const getPerformanceTimeLabel = (
     performance: Pick<Performance, "startTime" | "endTime">,
   ): React.ReactNode => {
@@ -32,7 +34,7 @@ export default function PerformanceTimeLabel({
     if (status === "running") {
       return (
         <span
-          className="mt-2 px-2 py-1 text-sm font-medium text-green-800 bg-green-100 rounded-full"
+          className="px-2 py-1 text-sm font-medium text-green-800 bg-green-100 rounded-full"
           style={{ fontWeight: "bold" }}
         >
           {label}
@@ -41,7 +43,7 @@ export default function PerformanceTimeLabel({
     }
     if (status === "ended") {
       return (
-        <span className="mt-2 px-2 py-1 text-sm font-medium text-gray-500 bg-gray-100 rounded-full">
+        <span className="px-2 py-1 text-sm font-medium text-gray-500 bg-gray-100 rounded-full">
           {label}
         </span>
       );
@@ -49,8 +51,8 @@ export default function PerformanceTimeLabel({
 
     if (full) {
       return (
-        <span className="mt-2 px-2 py-1 text-sm font-medium text-gray-500 bg-gray-100 rounded-full">
-          {formatTime2Digit(performance.startTime)} - {formatTime2Digit(performance.endTime)}
+        <span className="px-2 py-1 text-sm font-medium text-gray-500 bg-gray-100 rounded-full">
+          {startDate}, {formatTime2Digit(performance.startTime)} - {formatTime2Digit(performance.endTime)}
         </span>
       );
     }

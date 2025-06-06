@@ -64,8 +64,8 @@ export const StagePage: React.FC = () => {
     })
     .filter((performance) => {
       const now = new Date();
-      const start = new Date(performance.startTime);
-      return start >= now;
+      const endTime = new Date(performance.endTime);
+      return endTime >= now;
     })
     .sort(byStartTime);
 

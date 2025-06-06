@@ -3,6 +3,7 @@ import { HeartIcon } from "./icons";
 import { toggleFavorite, isFavorite } from "../services/favoritesService";
 import { useState } from "react";
 import type { Performance } from "../types";
+import PerformanceTimeLabel from "./PerformanceTimeLabel";
 
 interface PerformanceCardProps {
   performance: Performance & {
@@ -91,12 +92,7 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({ performance })
           <div className="col-span-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm opacity-90">
             <div className="flex items-center gap-1 text-sm">
               {startTime && endTime && (
-                <>
-                  <span className="opacity-80">{startTime.formattedDate},</span>
-                  <span className="font-medium">
-                    {startTime.formattedTime} - {endTime.formattedTime}
-                  </span>
-                </>
+                <PerformanceTimeLabel performance={performance} full/>
               )}
             </div>
             {performance.stage?.name && (
