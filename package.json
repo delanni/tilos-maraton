@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "format": "biome format . --write",
     "lint": "biome lint .",
-    "deploy-gh": "./scripts/deploy-gh.sh"
+    "deploy-gh": "./scripts/deploy-gh.sh",
+    "bundle-tilos": "./scripts/create-tilos-bundle.sh"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
