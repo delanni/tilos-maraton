@@ -3,7 +3,12 @@ import { Link, useLoaderData } from "react-router-dom";
 
 import { BasePage } from "./BasePage";
 import { getAllStages, getEventMeta } from "../services/dataService";
-import { FacebookIcon, YoutubeIcon, InstagramIcon, SocialLink } from "../components/icons";
+import {
+  FacebookIcon,
+  YoutubeIcon,
+  InstagramIcon,
+  SocialLink,
+} from "../components/icons";
 import type { FestivalInfo, Stage } from "../types";
 
 export const loadFestivalInfo = () => {
@@ -12,18 +17,21 @@ export const loadFestivalInfo = () => {
 
 function InfoPageHeroSection({ eventInfo }: { eventInfo: FestivalInfo }) {
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg p-8 text-white">
-      <h1 className="text-4xl font-bold">{eventInfo.eventName}</h1>
-      <p className="text-2xl mt-2">{eventInfo.tagline}</p>
-      <p className="mt-4 text-lg">
-        {eventInfo.dates} • {eventInfo.location}
+    <div className="bg-gradient-to-r from-accent to-main rounded-lg p-4">
+      <h1 className="text-4xl font-bold bg-gradient-to-r from-main to-accent text-background p-2 rounded-lg">
+        {eventInfo.eventName}
+      </h1>
+      <p className="text-2xl mt-2 rounded-lg bg-main text-background text-center">
+        ,,{eventInfo.tagline}“
       </p>
+      <p className="mt-4 text-lg text-background">📆 {eventInfo.dates}</p>
+      <p className="mt-2 text-lg text-background">📍 {eventInfo.location}</p>
       <div className="mt-6 flex flex-wrap gap-4">
         <a
           href={eventInfo.links.maraton.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors inline-flex items-center"
+          className="bg-white text-text px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors inline-flex items-center"
         >
           Maraton főoldal
         </a>
@@ -59,7 +67,7 @@ function InfoPageHeroSection({ eventInfo }: { eventInfo: FestivalInfo }) {
 
 function InfoPageAboutSection({ eventInfo }: { eventInfo: FestivalInfo }) {
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm">
+    <div className="bg-white rounded-lg p-4 shadow-sm">
       <h2 className="text-2xl font-semibold mb-4">Mi az a Tilos Maraton?</h2>
       <div className="prose max-w-none">
         {eventInfo.description.map((item, index) => (
@@ -74,7 +82,7 @@ function InfoPageAboutSection({ eventInfo }: { eventInfo: FestivalInfo }) {
 
 function InfoPageDirectivesSection({ eventInfo }: { eventInfo: FestivalInfo }) {
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm">
+    <div className="bg-white rounded-lg p-4 shadow-sm">
       <h2 className="text-2xl font-semibold mb-4">Fontos!</h2>
       <div className="prose max-w-none">
         {eventInfo.generalDirectives.map((item, index) => (
@@ -89,7 +97,7 @@ function InfoPageDirectivesSection({ eventInfo }: { eventInfo: FestivalInfo }) {
 
 function InfoPageLocationSection({ eventInfo }: { eventInfo: FestivalInfo }) {
   return (
-    <div className="bg-gray-50 p-6 rounded-lg">
+    <div className="bg-gray-50 p-4 rounded-lg">
       <h2 className="text-2xl font-semibold mb-4">Helyszín</h2>
       <div className="space-y-4">
         <a
@@ -110,19 +118,24 @@ function InfoPageLocationSection({ eventInfo }: { eventInfo: FestivalInfo }) {
 
 function InfoPageStagesSection({ stages }: { stages: Stage[] }) {
   return (
-    <div className="bg-gray-50 p-6 rounded-lg">
+    <div className="bg-gray-50 p-4 rounded-lg">
       <h2 className="text-2xl font-semibold mb-4">Színpadok</h2>
       {stages
         .filter((e) => !e.hidden)
         .map((stage) => (
-          <div key={stage.id} className="border rounded-lg p-4 mb-4 bg-white shadow-sm">
+          <div
+            key={stage.id}
+            className="border rounded-lg p-4 mb-4 bg-white shadow-sm"
+          >
             <Link to={`/stage/${stage.id}`} className="block">
               <div className="flex flex-col items-start gap-2">
                 <div className="flex items-center">
                   <span className="text-2xl mr-2">{stage.icon}</span>
                   <h3 className="font-medium text-lg">{stage.name}</h3>
                 </div>
-                <p className="mt-2 md:mt-0 text-gray-600 flex-1">{stage.description}</p>
+                <p className="mt-2 md:mt-0 text-gray-600 flex-1">
+                  {stage.description}
+                </p>
               </div>
             </Link>
           </div>
@@ -133,18 +146,37 @@ function InfoPageStagesSection({ stages }: { stages: Stage[] }) {
 
 function InfoPageContactSection({ eventInfo }: { eventInfo: FestivalInfo }) {
   return (
-    <div className="bg-gray-50 rounded-lg p-6">
+    <div className="bg-gray-50 rounded-lg p-4">
       <h2 className="text-2xl font-semibold mb-4">Kapcsolat</h2>
       <div className="space-y-2">
         <p>
           Email:{" "}
-          <a href={`mailto:${eventInfo.contact}`} className="text-blue-600 hover:underline">
+          <a
+            href={`mailto:${eventInfo.contact}`}
+            className="text-blue-600 hover:underline"
+          >
             {eventInfo.contact}
           </a>
         </p>
-        <p>Adástelefon: +36 1 215 3773</p>
+        {eventInfo.contacts.map((contact) => (
+          <p key={contact.role}>
+            {contact.role}:{" "}
+            <a
+              href={`mailto:${contact.email}`}
+              className="text-blue-600 hover:underline"
+            >
+              {contact.email}
+            </a>
+          </p>
+        ))}
+        <p>
+          Adástelefon:{" "}
+          <a href="tel:+3612153773" className="text-blue-600 hover:underline">
+            +36 1 215 3773
+          </a>
+        </p>
         <div className="pt-4 mt-4 border-t">
-          <h3 className="font-medium mb-2">Follow Us</h3>
+          <h3 className="font-medium mb-2">Kövess!</h3>
           <div className="flex space-x-4">
             <SocialLink
               href={eventInfo.links.facebook.url}
@@ -156,7 +188,11 @@ function InfoPageContactSection({ eventInfo }: { eventInfo: FestivalInfo }) {
               icon={<InstagramIcon />}
               label="Instagram"
             />
-            <SocialLink href={eventInfo.links.youtube.url} icon={<YoutubeIcon />} label="YouTube" />
+            <SocialLink
+              href={eventInfo.links.youtube.url}
+              icon={<YoutubeIcon />}
+              label="YouTube"
+            />
           </div>
         </div>
       </div>
@@ -169,7 +205,7 @@ export const InfoPage: React.FC = () => {
 
   return (
     <BasePage>
-      <div className="space-y-8">
+      <div className="space-y-8 p-4">
         <InfoPageHeroSection eventInfo={eventInfo} />
         <InfoPageAboutSection eventInfo={eventInfo} />
         <InfoPageDirectivesSection eventInfo={eventInfo} />

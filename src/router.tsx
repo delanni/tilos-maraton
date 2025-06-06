@@ -3,11 +3,14 @@ import App from "./App";
 import TimetablePage, { loadTimetableData } from "./pages/TimetablePage";
 import { InfoPage, loadFestivalInfo } from "./pages/InfoPage";
 import { ArtistPage, loadArtistPageData } from "./pages/ArtistPage";
-import { PerformancePage, loadPerformancePageData } from "./pages/PerformancePage";
+import {
+  PerformancePage,
+  loadPerformancePageData,
+} from "./pages/PerformancePage";
 import { StagePage, loadStagePageData } from "./pages/StagePage";
-import { DayPage, loadDayPageData } from "./pages/DayPage";
 import { SearchPage, loadSearchPageData } from "./pages/SearchPage";
 import MapPage, { loadMapPageData } from "./pages/MapPage";
+import { BasePage } from "./pages/BasePage";
 
 export const router = createBrowserRouter(
   [
@@ -16,7 +19,11 @@ export const router = createBrowserRouter(
       children: [
         {
           index: true,
-          element: <TimetablePage />,
+          element: (
+            <BasePage>
+              <TimetablePage />
+            </BasePage>
+          ),
           loader: loadTimetableData,
         },
         {
@@ -40,13 +47,12 @@ export const router = createBrowserRouter(
           loader: loadStagePageData,
         },
         {
-          path: "day/:id",
-          element: <DayPage />,
-          loader: loadDayPageData,
-        },
-        {
           path: "search",
-          element: <SearchPage />,
+          element: (
+            <BasePage>
+              <SearchPage />
+            </BasePage>
+          ),
           loader: loadSearchPageData,
         },
         {
@@ -59,5 +65,5 @@ export const router = createBrowserRouter(
   ],
   {
     basename: process.env.BASE_NAME || "/",
-  },
+  }
 );

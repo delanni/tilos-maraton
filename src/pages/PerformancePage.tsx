@@ -66,7 +66,7 @@ export const PerformancePage: React.FC = () => {
   return (
     <BasePage>
       <div className="space-y-6">
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg p-6 text-white">
+        <div className="bg-gradient-to-r from-accent to-blue-800 rounded-lg p-6 text-white">
           <h2 className="text-3xl font-bold">
             {performance.artist.name}
             {performance.artist.collective && ` (${performance.artist.collective})`}
@@ -186,7 +186,7 @@ export const PerformancePage: React.FC = () => {
             {performance.stage && (
               <div className="bg-gray-50 p-4 rounded-lg">
                 <Link to={`/stage/${performance.stageId}`}>
-                  <h4 className="font-medium">{performance.stage.name}</h4>
+                  <h4 className="font-medium">{performance.stage.icon} {performance.stage.name}</h4>
                   {performance.stage.description && (
                     <p className="text-gray-600 mt-1">{performance.stage.description}</p>
                   )}

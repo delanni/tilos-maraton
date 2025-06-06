@@ -10,6 +10,7 @@ import {
 import type { Stage, Performance, Artist, Day } from "../types";
 import { PerformanceCard } from "../components/PerformanceCard";
 import MapComponent from "../components/MapComponent";
+import { byStartTime } from "../lib/sorting";
 
 interface PerformanceWithDetails extends Performance {
   artist: Artist | undefined;
@@ -21,7 +22,9 @@ type StagePageData = Stage & {
   performances: PerformanceWithDetails[];
 };
 
-export const loadStagePageData: LoaderFunction<StagePageData> = ({ params }) => {
+export const loadStagePageData: LoaderFunction<StagePageData> = ({
+  params,
+}) => {
   const stageId = params.id;
   if (!stageId) {
     throw new Response("Stage ID is required", { status: 400 });
@@ -42,7 +45,9 @@ export const loadStagePageData: LoaderFunction<StagePageData> = ({ params }) => 
 };
 
 export const StagePage: React.FC = () => {
-  const stage = useLoaderData() as StagePageData & { performances: PerformanceWithDetails[] };
+  const stage = useLoaderData() as StagePageData & {
+    performances: PerformanceWithDetails[];
+  };
 
   const upcomingPerformances: PerformanceWithDetails[] = stage.performances
     .map((performance): PerformanceWithDetails => {
@@ -62,22 +67,26 @@ export const StagePage: React.FC = () => {
       const start = new Date(performance.startTime);
       return start >= now;
     })
-    .sort((a, b) => {
-      const aDate = new Date(a.startTime);
-      const bDate = new Date(b.startTime);
-      return aDate.getTime() - bDate.getTime();
-    });
+    .sort(byStartTime);
 
   return (
     <BasePage>
       <div className="space-y-8">
         {/* Stage Header */}
         <div className="relative rounded-lg overflow-hidden">
-          <div className="h-64 bg-gray-300 flex items-center justify-center">
-            <span className="text-gray-500">Stage Image</span>
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
-            <h2 className="text-3xl font-bold">{stage.name}</h2>
+          <div
+            className="h-64 bg-gray-300 flex items-center justify-center"
+            style={{
+              backgroundImage: `url(${stage.image})`,
+              backgroundPosition: "center",
+              backgroundRepeat: "repeat-y",
+              animation: "scrollBackground 20s ease-in-out infinite",
+              backgroundSize: "cover"
+            }}
+          >
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-accent to-transparent text-white">
+              <h2 className="text-3xl font-bold">{stage.name}</h2>
+            </div>
           </div>
         </div>
 
@@ -99,10 +108,15 @@ export const StagePage: React.FC = () => {
                 <div className="border rounded-lg overflow-hidden">
                   <div className="bg-gray-50 p-4 border-b font-medium">
                     <div className="mt-6">
-                      <h3 className="text-xl font-semibold mb-3">Közelgő események</h3>
+                      <h3 className="text-xl font-semibold mb-3">
+                        Közelgő események
+                      </h3>
                       <div className="space-y-4">
                         {upcomingPerformances.slice(0, 5).map((performance) => (
-                          <UpcomingPerformanceCard key={performance.id} performance={performance} />
+                          <UpcomingPerformanceCard
+                            key={performance.id}
+                            performance={performance}
+                          />
                         ))}
                       </div>
                     </div>

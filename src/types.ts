@@ -26,6 +26,7 @@ export interface Stage {
   name: string;
   description: string;
   icon: string;
+  image: string | null;
   offsetX: number;
   offsetY: number;
   hidden?: boolean;

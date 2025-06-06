@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
-import type { Day } from "../types";
+import { ButtonGroup } from "../components/ui/ButtonGroup";
+import { Card } from "./BasePage";
+import type { Day, Stage } from "../types";
 import {
   getArtistById,
   getStageById,
@@ -12,6 +14,9 @@ import {
 import { getFavorites } from "../services/favoritesService";
 import { PerformanceCard } from "../components/PerformanceCard";
 import type { Performance } from "../types";
+import ButtonWithIcon from "../components/ui/ButtonWithIcon";
+import { byStartTime } from "../lib/sorting";
+import { formatDate2Digit } from "../lib/formatTime";
 
 // Define the expected shape of the performance data
 type PerformanceData = Performance & {
@@ -49,19 +54,111 @@ export const loadTimetableData = (): TimetableLoaderData => {
   return { performances: enrichedPerformances, days };
 };
 
+function DaySelector({
+  days,
+  activeDayId,
+  handleDayChange,
+}: {
+  days: Day[];
+  activeDayId: string;
+  handleDayChange: (dayId: string) => void;
+}) {
+  return (
+    <Card className="p-0">
+      <ButtonGroup>
+        {days.map((day) => (
+          <ButtonWithIcon
+            id={`day-filter-${day.id}`}
+            key={day.id}
+            active={day.id === activeDayId}
+            onClick={() => handleDayChange(day.id)}
+            icon={day.name}
+            activeBackgroundOverride={day.themeColors.background}
+            activeColorOverride={day.themeColors.text}
+          >
+            <span style={{ whiteSpace: "nowrap" }}>
+              {formatDate2Digit(day.date)}
+            </span>
+          </ButtonWithIcon>
+        ))}
+      </ButtonGroup>
+    </Card>
+  );
+}
+
+function StageSelector({
+  stages,
+  handleStageChange,
+}: {
+  stages: Stage[];
+  handleStageChange: (stageId: string) => void;
+}) {
+  const [activeStageId, setActiveStageId] = useState<string>(
+    localStorage.getItem("activeStageId") || ""
+  );
+
+  const stageSelected = (stageId: string) => {
+    setActiveStageId(stageId);
+    localStorage.setItem("activeStageId", stageId);
+    handleStageChange(stageId);
+  };
+
+  return (
+    <Card className="p-0">
+      <div className="space-y-4">
+        <ButtonGroup>
+          <ButtonWithIcon
+            id="stage-filter-all"
+            active={activeStageId === "all"}
+            icon="💠"
+            onClick={() => stageSelected("all")}
+            activeBackgroundOverride="#379339"
+          >
+            Összes
+          </ButtonWithIcon>
+          <ButtonWithIcon
+            id="stage-filter-favorites"
+            active={activeStageId === "favorites"}
+            icon="❤️"
+            onClick={() => stageSelected("favorites")}
+            activeBackgroundOverride="#EF5B5D"
+          >
+            Kedvencek
+          </ButtonWithIcon>
+
+          {stages.map((stage) => (
+            <ButtonWithIcon
+              id={`stage-fitler-${stage.id}`}
+              key={stage.id}
+              active={activeStageId === stage.id}
+              icon={stage.icon}
+              onClick={() => stageSelected(stage.id)}
+            >
+              {stage.name}
+            </ButtonWithIcon>
+          ))}
+        </ButtonGroup>
+      </div>
+    </Card>
+  );
+}
+
 export const TimetablePage: React.FC = () => {
   const { performances, days } = useLoaderData() as TimetableLoaderData;
-  const [activeDayId, setActiveDayId] = useState<string>(localStorage.getItem("activeDayId") || "");
-  const [activeStageId, setActiveStageId] = useState<string>(
-    localStorage.getItem("activeStageId") || "",
+  const [activeDayId, setActiveDayId] = useState<string>(
+    localStorage.getItem("activeDayId") || ""
   );
-  const [showFavorites, setShowFavorites] = useState<boolean>(false);
-  const stages = getAllStages().filter((stage) => !stage.hidden && stage.id !== "merch");
+  const [activeStageId, setActiveStageId] = useState<string>(
+    localStorage.getItem("activeStageId") || ""
+  );
+  const stages = getAllStages().filter(
+    (stage) => !stage.hidden && stage.id !== "merch"
+  );
 
   const favorites = getFavorites();
 
   useEffect(() => {
-    // Set the initial active day to the closes to current date
+    // Set the initial active day to the closest to current date
     if (days.length > 0 && !activeDayId) {
       const today = new Date();
       const closestDay = days.reduce((closest, day) => {
@@ -73,41 +170,35 @@ export const TimetablePage: React.FC = () => {
       });
       setActiveDayId(closestDay.id);
     }
-  }, [performances, days, activeDayId]);
+  }, [days, activeDayId]);
 
   const handleDayChange = (dayId: string) => {
     setActiveDayId(dayId);
     localStorage.setItem("activeDayId", dayId);
   };
-
   const handleStageChange = (stageId: string) => {
     setActiveStageId(stageId);
-    setShowFavorites(false);
     localStorage.setItem("activeStageId", stageId);
-  };
-
-  const handleFavoritesToggle = () => {
-    const newShowFavorites = !showFavorites;
-    setShowFavorites(newShowFavorites);
-    if (newShowFavorites) {
-      setActiveStageId("");
-    }
   };
 
   // Filter and sort performances for the active day and selected stage
   const sortedPerformances = performances
     .filter((performance) => {
       const matchesDay = performance.dayId === activeDayId;
-      const matchesStage = !activeStageId || performance.stageId === activeStageId;
+      const matchesStage =
+        !activeStageId || performance.stageId === activeStageId;
       const isFavorite = favorites.includes(performance.id);
 
-      if (showFavorites) {
-        return matchesDay && isFavorite && performance.startTime && performance.endTime;
+      switch (activeStageId) {
+        case "all":
+          return matchesDay;
+        case "favorites":
+          return matchesDay && isFavorite;
+        default:
+          return matchesDay && matchesStage;
       }
-
-      return matchesDay && matchesStage && performance.startTime && performance.endTime;
     })
-    .sort((a, b) => new Date(a.startTime).getTime() - new Date(b.startTime).getTime());
+    .sort(byStartTime);
 
   if (days.length === 0) {
     return (
@@ -118,104 +209,36 @@ export const TimetablePage: React.FC = () => {
   }
 
   return (
-    <div className="p-4 max-w-4xl mx-auto">
+    <div className="space-y-6">
       {/* Day selector */}
-      <div className="flex overflow-x-auto pb-2 mb-2 gap-2">
-        {days.map((day) => (
-          <button
-            type="button"
-            key={day.id}
-            className={`px-3 py-1.5 rounded-lg transition-colors text-xs font-medium ${
-              day.id === activeDayId
-                ? "bg-blue-600 text-white"
-                : "bg-gray-100 hover:bg-gray-200 text-gray-800"
-            }`}
-            onClick={() => handleDayChange(day.id)}
-          >
-            <div>{day.name}</div>
-            <div>
-              {new Date(day.date).toLocaleDateString("hu-HU", {
-                month: "short",
-                day: "numeric",
-              })}
-            </div>
-          </button>
-        ))}
-      </div>
-      {/* Stage selector */}
-      <div className="flex overflow-x-auto pb-4 mb-6 gap-2">
-        <ButtonWithIcon
-          icon="💠"
-          label="Összes"
-          onClick={() => handleStageChange("")}
-          active={!activeStageId && !showFavorites}
-          activeColor="#4fde66"
-        />
-        <ButtonWithIcon
-          icon="❤️"
-          label="Kedvencek"
-          onClick={handleFavoritesToggle}
-          active={showFavorites}
-          activeColor="#f55555"
-        />
-        {stages.map((stage) => (
-          <ButtonWithIcon
-            key={stage.id}
-            icon={stage.icon}
-            label={stage.name}
-            onClick={() => handleStageChange(stage.id)}
-            active={activeStageId === stage.id}
-          />
-        ))}
-      </div>
+      <DaySelector
+        days={days}
+        activeDayId={activeDayId}
+        handleDayChange={handleDayChange}
+      />
 
-      {sortedPerformances.length === 0 ? (
-        <div className="text-center py-8">
-          <p className="text-gray-600">
-            {showFavorites
-              ? "Nincsenek mentett előadások ezen a napon."
-              : "Nincs előadás ezen a napon."}
-          </p>
-        </div>
-      ) : (
-        <div className="space-y-4 overflow-y-auto" style={{ height: "600px" }}>
-          {sortedPerformances.map((performance) => (
-            <PerformanceCard key={performance.id} performance={performance} />
-          ))}
-        </div>
-      )}
+      {/* Stage selector */}
+      <StageSelector stages={stages} handleStageChange={handleStageChange} />
+
+      <Card className="p-4">
+        {sortedPerformances.length === 0 ? (
+          <div className="text-center py-8">
+            <p className="text-gray-600">
+              {activeStageId === "favorites"
+                ? "Nincsenek mentett előadások ezen a napon."
+                : "Nincs előadás ezen a napon."}
+            </p>
+          </div>
+        ) : (
+          <div className="space-y-4 max-h-[calc(100vh-400px)] overflow-y-auto pr-2 -mr-2">
+            {sortedPerformances.map((performance) => (
+              <PerformanceCard key={performance.id} performance={performance} />
+            ))}
+          </div>
+        )}
+      </Card>
     </div>
   );
 };
-
-function ButtonWithIcon({
-  icon,
-  label,
-  onClick,
-  active,
-  activeColor = "#3587eb",
-}: {
-  icon: string;
-  label: string;
-  onClick: () => void;
-  active: boolean;
-  activeColor?: string;
-}) {
-  return (
-    <button
-      type="button"
-      className={`px-3 py-1.5 rounded-lg transition-colors text-xs font-medium flex flex-col items-center gap-1 ${
-        active ? `text-white` : "bg-gray-100 hover:bg-gray-200 text-gray-800"
-      }`}
-      style={{
-        backgroundColor: active ? activeColor : "#e5e7eb",
-      }}
-      onClick={() => onClick()}
-    >
-      {icon && <span className="block text-lg">{icon}</span>}
-      <span className="block">{label}</span>
-    </button>
-  );
-}
 
 export default TimetablePage;
