@@ -11,7 +11,8 @@ import type { Performance, Artist, Day, Stage } from "../types";
 import { formatDate, formatTime2Digit, printDuration } from "../lib/formatTime";
 import { isFavorite, toggleFavorite } from "../services/favoritesService";
 import { useEffect, useState } from "react";
-import { missingArtistFallbackIcon } from "../components/icons";
+import { missingArtistFallbackIcon, CalendarIcon } from "../components/icons";
+import { addToGoogleCalendar } from "../lib/addToGcal";
 
 type PerformanceWithDetails = Performance & {
   artist: Artist | undefined;
@@ -96,37 +97,60 @@ export const PerformancePage: React.FC = () => {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-              <button
-                type="button"
-                onClick={handleFavoriteClick}
-                className={`w-full py-2 px-4 rounded-md flex items-center justify-center gap-2 transition-colors ${
-                  isPerformanceFavorite
-                    ? "bg-red-500 text-white"
-                    : "bg-gray-100 text-gray-800 hover:bg-gray-200"
-                }`}
-                aria-label={
-                  isPerformanceFavorite ? "Eltávolítás a kedvencekből" : "Hozzáadás a kedvencekhez"
-                }
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={`h-5 w-5 ${isPerformanceFavorite ? "text-white" : "text-current"}`}
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-label="Heart icon"
+            <div className="space-y-4">
+              <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                <button
+                  type="button"
+                  onClick={handleFavoriteClick}
+                  className={`w-full py-2 px-4 rounded-md flex items-center justify-center gap-2 transition-colors ${
+                    isPerformanceFavorite
+                      ? "bg-red-500 text-white"
+                      : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                  }`}
+                  aria-label={
+                    isPerformanceFavorite ? "Eltávolítás a kedvencekből" : "Hozzáadás a kedvencekhez"
+                  }
                 >
-                  <title>Heart icon</title>
-                  <path
-                    fillRule="evenodd"
-                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span>
-                  {isPerformanceFavorite ? "Eltávolítás a kedvencekből" : "Mentés a kedvencekbe"}
-                </span>
-              </button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`h-5 w-5 ${isPerformanceFavorite ? "text-white" : "text-current"}`}
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-label="Heart icon"
+                  >
+                    <title>Heart icon</title>
+                    <path
+                      fillRule="evenodd"
+                      d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <span>
+                    {isPerformanceFavorite ? "Eltávolítás a kedvencekből" : "Mentés a kedvencekbe"}
+                  </span>
+                </button>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                <button
+                  type="button"
+                  onClick={() => addToGoogleCalendar({
+                    startTime: performance.startTime,
+                    endTime: performance.endTime,
+                    artist: {
+                      name: performance.artist?.name || '',
+                      description: performance.artist?.description || ''
+                    },
+                    stage: {
+                      name: performance.stage?.name || ''
+                    }
+                  })}
+                  className="w-full py-2 px-4 bg-blue-50 text-blue-700 rounded-md flex items-center justify-center gap-2 hover:bg-blue-100 transition-colors"
+                  aria-label="Hozzáadás a Google Naptárhoz"
+                >
+                  <CalendarIcon className="h-5 w-5" />
+                  <span>Hozzáadás a naptárhoz</span>
+                </button>
+              </div>
             </div>
             <Link to={`/artist/${performance.artistId}`}>
               <div className="bg-gray-50 p-4 rounded-lg">
