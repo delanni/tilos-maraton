@@ -52,7 +52,8 @@ export default function PerformanceTimeLabel({
     if (full) {
       return (
         <span className="px-2 py-1 text-sm font-medium text-gray-500 bg-gray-100 rounded-full">
-          {startDate}, {formatTime2Digit(performance.startTime)} - {formatTime2Digit(performance.endTime)}
+          {startDate}, {formatTime2Digit(performance.startTime)} -{" "}
+          {formatTime2Digit(performance.endTime)}
         </span>
       );
     }

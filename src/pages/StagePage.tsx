@@ -22,9 +22,7 @@ type StagePageData = Stage & {
   performances: PerformanceWithDetails[];
 };
 
-export const loadStagePageData: LoaderFunction<StagePageData> = ({
-  params,
-}) => {
+export const loadStagePageData: LoaderFunction<StagePageData> = ({ params }) => {
   const stageId = params.id;
   if (!stageId) {
     throw new Response("Stage ID is required", { status: 400 });
@@ -81,7 +79,7 @@ export const StagePage: React.FC = () => {
               backgroundPosition: "center",
               backgroundRepeat: "repeat-y",
               animation: "scrollBackground 20s ease-in-out infinite",
-              backgroundSize: "cover"
+              backgroundSize: "cover",
             }}
           >
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-accent to-transparent text-white">
@@ -108,15 +106,10 @@ export const StagePage: React.FC = () => {
                 <div className="border rounded-lg overflow-hidden">
                   <div className="bg-gray-50 p-4 border-b font-medium">
                     <div className="mt-6">
-                      <h3 className="text-xl font-semibold mb-3">
-                        Közelgő események
-                      </h3>
+                      <h3 className="text-xl font-semibold mb-3">Közelgő események</h3>
                       <div className="space-y-4">
                         {upcomingPerformances.slice(0, 5).map((performance) => (
-                          <UpcomingPerformanceCard
-                            key={performance.id}
-                            performance={performance}
-                          />
+                          <UpcomingPerformanceCard key={performance.id} performance={performance} />
                         ))}
                       </div>
                     </div>

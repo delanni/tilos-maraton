@@ -20,9 +20,7 @@ export default function NavHeader() {
             to="/info"
             className={({ isActive }) =>
               `rounded-md text-sm text-center font-medium transition-colors ${
-                isActive
-                  ? "bg-accent/10 text-accent"
-                  : "text-muted hover:text-accent"
+                isActive ? "bg-accent/10 text-accent" : "text-muted hover:text-accent"
               }`
             }
           >
@@ -32,9 +30,7 @@ export default function NavHeader() {
             to="/search"
             className={({ isActive }) =>
               `w-16 rounded-md text-sm text-center font-medium transition-colors ${
-                isActive
-                  ? "bg-accent/10 text-accent"
-                  : "text-muted hover:text-accent"
+                isActive ? "bg-accent/10 text-accent" : "text-muted hover:text-accent"
               }`
             }
           >

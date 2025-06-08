@@ -4,17 +4,17 @@
 
 :root {
   /* Light Theme (default) */
-  --color-background: #EDE1DF;
+  --color-background: #ede1df;
   --color-background-accent: #c3b4b1;
-  --color-main: #EF5B5D;
-  --color-accent: #8E88C0;
+  --color-main: #ef5b5d;
+  --color-accent: #8e88c0;
   --color-accent-hover: #886ec0;
-  --color-text: #231F20;
+  --color-text: #231f20;
   --color-text-muted: #313131;
   --color-border: #e2e8f0;
   --color-card: #ffffff;
   --color-card-hover: #f8fafc;
-  --color-card-selected: #8E88C0;
+  --color-card-selected: #8e88c0;
 
   --color-accent-greenish: #379339;
 }
@@ -28,7 +28,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--color-main);
 }
 

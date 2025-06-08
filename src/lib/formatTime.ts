@@ -40,7 +40,7 @@ export const printDuration = (startTime: string, endTime: string) => {
 
   if (hours === 0) {
     return `${minutes} perc`;
-  } 
+  }
   if (minutes === 0) {
     return `${hours} óra`;
   }

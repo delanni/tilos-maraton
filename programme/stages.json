@@ -49,7 +49,7 @@
     "name": "Tilos Caravan Stúdió",
     "description": "Élő rádiós bejelentkezések a Dürer Kertből",
     "icon": "🎙️",
-    "image":"https://tilos.hu/upload/maraton/240615-TilosPartyNap-04.jpg",
+    "image": "https://tilos.hu/upload/maraton/240615-TilosPartyNap-04.jpg",
     "offsetX": 660,
     "offsetY": 666
   },
@@ -58,7 +58,7 @@
     "name": "Bogrács",
     "description": "Kerti konyha, minden nap 2 féle étellel",
     "icon": "🍜",
-    "image":"https://tilos.hu/upload/maraton/240609-CsaladiNap-05.jpg",
+    "image": "https://tilos.hu/upload/maraton/240609-CsaladiNap-05.jpg",
     "offsetX": 1354,
     "offsetY": 693
   },

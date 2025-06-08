@@ -27,7 +27,10 @@ interface PerformanceCardProps {
   };
 }
 
-export const PerformanceCard: React.FC<PerformanceCardProps> = ({ performance }) => {
+export const PerformanceCard: React.FC<PerformanceCardProps> = ({
+  performance,
+  highlightActive,
+}) => {
   const [isFavorited, setIsFavorited] = useState(isFavorite(performance.id));
 
   const handleFavoriteClick = (e: React.MouseEvent) => {
@@ -53,6 +56,10 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({ performance })
 
   const startTime = performance.startTime ? formatDateTime(performance.startTime) : null;
   const endTime = performance.endTime ? formatDateTime(performance.endTime) : null;
+  const isActive =
+    highlightActive &&
+    new Date(performance.startTime).getTime() < new Date().getTime() &&
+    new Date(performance.endTime).getTime() > new Date().getTime();
 
   return (
     <div
@@ -60,6 +67,7 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({ performance })
       style={{
         backgroundColor: performance.day?.themeColors?.background,
         color: performance.day?.themeColors?.text,
+        border: isActive ? `2px dashed ${performance.day?.themeColors?.primary}` : "",
       }}
     >
       <Link to={`/performance/${performance.id}`} className="block group">
@@ -91,9 +99,7 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({ performance })
           {/* Second row: Date, time and stage */}
           <div className="col-span-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm opacity-90">
             <div className="flex items-center gap-1 text-sm">
-              {startTime && endTime && (
-                <PerformanceTimeLabel performance={performance} full/>
-              )}
+              {startTime && endTime && <PerformanceTimeLabel performance={performance} full />}
             </div>
             {performance.stage?.name && (
               <div className="flex items-center gap-1.5">

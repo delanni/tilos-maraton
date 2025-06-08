@@ -3,10 +3,7 @@ import App from "./App";
 import TimetablePage, { loadTimetableData } from "./pages/TimetablePage";
 import { InfoPage, loadFestivalInfo } from "./pages/InfoPage";
 import { ArtistPage, loadArtistPageData } from "./pages/ArtistPage";
-import {
-  PerformancePage,
-  loadPerformancePageData,
-} from "./pages/PerformancePage";
+import { PerformancePage, loadPerformancePageData } from "./pages/PerformancePage";
 import { StagePage, loadStagePageData } from "./pages/StagePage";
 import { SearchPage, loadSearchPageData } from "./pages/SearchPage";
 import MapPage, { loadMapPageData } from "./pages/MapPage";
@@ -65,5 +62,5 @@ export const router = createBrowserRouter(
   ],
   {
     basename: process.env.BASE_NAME || "/",
-  }
+  },
 );

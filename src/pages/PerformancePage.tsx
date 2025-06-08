@@ -108,7 +108,9 @@ export const PerformancePage: React.FC = () => {
                       : "bg-gray-100 text-gray-800 hover:bg-gray-200"
                   }`}
                   aria-label={
-                    isPerformanceFavorite ? "Eltávolítás a kedvencekből" : "Hozzáadás a kedvencekhez"
+                    isPerformanceFavorite
+                      ? "Eltávolítás a kedvencekből"
+                      : "Hozzáadás a kedvencekhez"
                   }
                 >
                   <svg
@@ -133,17 +135,19 @@ export const PerformancePage: React.FC = () => {
               <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
                 <button
                   type="button"
-                  onClick={() => addToGoogleCalendar({
-                    startTime: performance.startTime,
-                    endTime: performance.endTime,
-                    artist: {
-                      name: performance.artist?.name || '',
-                      description: performance.artist?.description || ''
-                    },
-                    stage: {
-                      name: performance.stage?.name || ''
-                    }
-                  })}
+                  onClick={() =>
+                    addToGoogleCalendar({
+                      startTime: performance.startTime,
+                      endTime: performance.endTime,
+                      artist: {
+                        name: performance.artist?.name || "",
+                        description: performance.artist?.description || "",
+                      },
+                      stage: {
+                        name: performance.stage?.name || "",
+                      },
+                    })
+                  }
                   className="w-full py-2 px-4 bg-blue-50 text-blue-700 rounded-md flex items-center justify-center gap-2 hover:bg-blue-100 transition-colors"
                   aria-label="Hozzáadás a Google Naptárhoz"
                 >
@@ -210,7 +214,9 @@ export const PerformancePage: React.FC = () => {
             {performance.stage && (
               <div className="bg-gray-50 p-4 rounded-lg">
                 <Link to={`/stage/${performance.stageId}`}>
-                  <h4 className="font-medium">{performance.stage.icon} {performance.stage.name}</h4>
+                  <h4 className="font-medium">
+                    {performance.stage.icon} {performance.stage.name}
+                  </h4>
                   {performance.stage.description && (
                     <p className="text-gray-600 mt-1">{performance.stage.description}</p>
                   )}

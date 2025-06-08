@@ -55,6 +55,10 @@
     "googleMaps": {
       "name": "Google Maps",
       "url": "https://www.google.com/maps/place/D%C3%BCrer+Kert/@47.516667,19.066667,17z/data=!3m1!4b1!4m5!3m4!1s0x4741d4b3b3b3b3b3:0x4b4b4b4b4b4b4b4b!8m2!3d47.516667!4d19.066667"
+    },
+    "support": {
+      "name": "Támogass!",
+      "url": "https://tilos.hu/tamogatas"
     }
   },
   "faq": [],

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { ButtonGroup } from "../components/ui/ButtonGroup";
 import { Card } from "./BasePage";
@@ -15,7 +15,7 @@ import { getFavorites } from "../services/favoritesService";
 import { PerformanceCard } from "../components/PerformanceCard";
 import type { Performance } from "../types";
 import ButtonWithIcon from "../components/ui/ButtonWithIcon";
-import { byStartTime } from "../lib/sorting";
+
 import { formatDate2Digit } from "../lib/formatTime";
 
 // Define the expected shape of the performance data
@@ -64,25 +64,21 @@ function DaySelector({
   handleDayChange: (dayId: string) => void;
 }) {
   return (
-    <Card className="p-0">
-      <ButtonGroup>
-        {days.map((day) => (
-          <ButtonWithIcon
-            id={`day-filter-${day.id}`}
-            key={day.id}
-            active={day.id === activeDayId}
-            onClick={() => handleDayChange(day.id)}
-            icon={day.name}
-            activeBackgroundOverride={day.themeColors.background}
-            activeColorOverride={day.themeColors.text}
-          >
-            <span style={{ whiteSpace: "nowrap" }}>
-              {formatDate2Digit(day.date)}
-            </span>
-          </ButtonWithIcon>
-        ))}
-      </ButtonGroup>
-    </Card>
+    <ButtonGroup>
+      {days.map((day) => (
+        <ButtonWithIcon
+          id={`day-filter-${day.id}`}
+          key={day.id}
+          active={day.id === activeDayId}
+          onClick={() => handleDayChange(day.id)}
+          icon={day.name}
+          activeBackgroundOverride={day.themeColors.background}
+          activeColorOverride={day.themeColors.text}
+        >
+          <span style={{ whiteSpace: "nowrap" }}>{formatDate2Digit(day.date)}</span>
+        </ButtonWithIcon>
+      ))}
+    </ButtonGroup>
   );
 }
 
@@ -94,7 +90,7 @@ function StageSelector({
   handleStageChange: (stageId: string) => void;
 }) {
   const [activeStageId, setActiveStageId] = useState<string>(
-    localStorage.getItem("activeStageId") || ""
+    localStorage.getItem("activeStageId") || "",
   );
 
   const stageSelected = (stageId: string) => {
@@ -104,78 +100,91 @@ function StageSelector({
   };
 
   return (
-    <Card className="p-0">
-      <div className="space-y-4">
-        <ButtonGroup>
-          <ButtonWithIcon
-            id="stage-filter-all"
-            active={activeStageId === "all"}
-            icon="💠"
-            onClick={() => stageSelected("all")}
-            activeBackgroundOverride="#379339"
-          >
-            Összes
-          </ButtonWithIcon>
-          <ButtonWithIcon
-            id="stage-filter-favorites"
-            active={activeStageId === "favorites"}
-            icon="❤️"
-            onClick={() => stageSelected("favorites")}
-            activeBackgroundOverride="#EF5B5D"
-          >
-            Kedvencek
-          </ButtonWithIcon>
+    <div className="space-y-2">
+      <ButtonGroup>
+        <ButtonWithIcon
+          id="stage-filter-all"
+          active={activeStageId === "all"}
+          icon="💠"
+          onClick={() => stageSelected("all")}
+          activeBackgroundOverride="#379339"
+        >
+          Összes
+        </ButtonWithIcon>
+        <ButtonWithIcon
+          id="stage-filter-favorites"
+          active={activeStageId === "favorites"}
+          icon="❤️"
+          onClick={() => stageSelected("favorites")}
+          activeBackgroundOverride="#EF5B5D"
+        >
+          Kedvencek
+        </ButtonWithIcon>
 
-          {stages.map((stage) => (
-            <ButtonWithIcon
-              id={`stage-fitler-${stage.id}`}
-              key={stage.id}
-              active={activeStageId === stage.id}
-              icon={stage.icon}
-              onClick={() => stageSelected(stage.id)}
-            >
-              {stage.name}
-            </ButtonWithIcon>
-          ))}
-        </ButtonGroup>
-      </div>
-    </Card>
+        {stages.map((stage) => (
+          <ButtonWithIcon
+            id={`stage-fitler-${stage.id}`}
+            key={stage.id}
+            active={activeStageId === stage.id}
+            icon={stage.icon}
+            onClick={() => stageSelected(stage.id)}
+          >
+            {stage.name}
+          </ButtonWithIcon>
+        ))}
+      </ButtonGroup>
+    </div>
   );
 }
 
 export const TimetablePage: React.FC = () => {
   const { performances, days } = useLoaderData() as TimetableLoaderData;
-  const [activeDayId, setActiveDayId] = useState<string>(
-    localStorage.getItem("activeDayId") || ""
-  );
   const [activeStageId, setActiveStageId] = useState<string>(
-    localStorage.getItem("activeStageId") || ""
+    localStorage.getItem("activeStageId") || "",
   );
-  const stages = getAllStages().filter(
-    (stage) => !stage.hidden && stage.id !== "merch"
-  );
+  const stages = getAllStages().filter((stage) => !stage.hidden && stage.id !== "merch");
 
-  const favorites = getFavorites();
+  // Find the active day based on festival hours (2 PM - 6 AM next day)
+  const getClosestDayId = (days: Day[]) => {
+    if (days.length === 0) return "";
 
-  useEffect(() => {
-    // Set the initial active day to the closest to current date
-    if (days.length > 0 && !activeDayId) {
-      const today = new Date();
-      const closestDay = days.reduce((closest, day) => {
+    const now = new Date();
+    const currentHour = now.getHours();
+
+    // If it's before 2 PM, we're still in the previous festival day (which ended at 6 AM)
+    const currentDate = new Date(now);
+    if (currentHour < 14) {
+      // Subtract one day to get the previous festival day
+      currentDate.setDate(currentDate.getDate() - 1);
+    }
+
+    // Format as YYYY-MM-DD to match the day.date format
+    const currentDateStr = currentDate.toISOString().split("T")[0];
+
+    // Find the day that matches the calculated date
+    const activeDay = days.find((day) => day.date === currentDateStr);
+
+    // If no matching day found (shouldn't happen with valid data), fall back to closest day
+    if (!activeDay) {
+      return days.reduce((closest, day) => {
         const dayDate = new Date(day.date);
-        return Math.abs(dayDate.getTime() - today.getTime()) <
-          Math.abs(new Date(closest.date).getTime() - today.getTime())
+        return Math.abs(dayDate.getTime() - now.getTime()) <
+          Math.abs(new Date(closest.date).getTime() - now.getTime())
           ? day
           : closest;
-      });
-      setActiveDayId(closestDay.id);
+      }).id;
     }
-  }, [days, activeDayId]);
+
+    return activeDay.id;
+  };
+
+  const [activeDayId, setActiveDayId] = useState<string>(getClosestDayId(days));
+  const favorites = getFavorites();
 
   const handleDayChange = (dayId: string) => {
     setActiveDayId(dayId);
-    localStorage.setItem("activeDayId", dayId);
   };
+
   const handleStageChange = (stageId: string) => {
     setActiveStageId(stageId);
     localStorage.setItem("activeStageId", stageId);
@@ -185,8 +194,7 @@ export const TimetablePage: React.FC = () => {
   const sortedPerformances = performances
     .filter((performance) => {
       const matchesDay = performance.dayId === activeDayId;
-      const matchesStage =
-        !activeStageId || performance.stageId === activeStageId;
+      const matchesStage = !activeStageId || performance.stageId === activeStageId;
       const isFavorite = favorites.includes(performance.id);
 
       switch (activeStageId) {
@@ -198,7 +206,18 @@ export const TimetablePage: React.FC = () => {
           return matchesDay && matchesStage;
       }
     })
-    .sort(byStartTime);
+    .sort((a, b) => {
+      // First sort by whether the performance has ended
+      const now = new Date();
+      const aHasEnded = new Date(a.endTime) < now;
+      const bHasEnded = new Date(b.endTime) < now;
+
+      if (aHasEnded && !bHasEnded) return 1; // a comes after b
+      if (!aHasEnded && bHasEnded) return -1; // a comes before b
+
+      // If both have ended or both haven't ended, sort by start time
+      return new Date(a.startTime).getTime() - new Date(b.startTime).getTime();
+    });
 
   if (days.length === 0) {
     return (
@@ -209,13 +228,9 @@ export const TimetablePage: React.FC = () => {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-2">
       {/* Day selector */}
-      <DaySelector
-        days={days}
-        activeDayId={activeDayId}
-        handleDayChange={handleDayChange}
-      />
+      <DaySelector days={days} activeDayId={activeDayId} handleDayChange={handleDayChange} />
 
       {/* Stage selector */}
       <StageSelector stages={stages} handleStageChange={handleStageChange} />
@@ -232,7 +247,7 @@ export const TimetablePage: React.FC = () => {
         ) : (
           <div className="space-y-4 max-h-[calc(100vh-400px)] overflow-y-auto pr-2 -mr-2">
             {sortedPerformances.map((performance) => (
-              <PerformanceCard key={performance.id} performance={performance} />
+              <PerformanceCard key={performance.id} performance={performance} highlightActive />
             ))}
           </div>
         )}
