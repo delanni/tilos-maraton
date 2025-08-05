@@ -4,6 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { BasePage } from "./BasePage";
 import { getAllStages, getEventMeta } from "../services/dataService";
 import { FacebookIcon, YoutubeIcon, InstagramIcon, SocialLink } from "../components/icons";
+import { PWARefresh } from "../components/PWARefresh";
 import type { FestivalInfo, Stage } from "../types";
 
 export const loadFestivalInfo = () => {
@@ -191,6 +192,9 @@ export const InfoPage: React.FC = () => {
         <InfoPageDirectivesSection eventInfo={eventInfo} />
         <InfoPageLocationSection eventInfo={eventInfo} />
         <InfoPageStagesSection stages={stages} />
+        <div className="bg-white rounded-lg shadow-sm">
+          <PWARefresh onRefresh={() => window.location.reload()} />
+        </div>
         <InfoPageContactSection eventInfo={eventInfo} />
       </div>
     </BasePage>
