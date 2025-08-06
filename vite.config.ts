@@ -59,13 +59,13 @@ export default defineConfig({
         scope: baseName,
         icons: [
           {
-            src: "/icons/icon-192.svg",
+            src: "/logo.svg",
             sizes: "192x192",
             type: "image/svg+xml",
             purpose: "any maskable",
           },
           {
-            src: "/icons/icon-512.svg",
+            src: "/logo.svg",
             sizes: "512x512",
             type: "image/svg+xml",
             purpose: "any maskable",
@@ -78,14 +78,14 @@ export default defineConfig({
             short_name: "Program",
             description: "Napi program megtekintése",
             url: `${baseName}program`,
-            icons: [{ src: "/icons/icon-192.svg", sizes: "192x192" }]
+            icons: [{ src: "/logo.svg", sizes: "192x192" }]
           },
           {
             name: "Előadók",
             short_name: "Előadók",
             description: "Előadók listája",
             url: `${baseName}artists`,
-            icons: [{ src: "/icons/icon-192.svg", sizes: "192x192" }]
+            icons: [{ src: "/logo.svg", sizes: "192x192" }]
           }
         ],
       },
